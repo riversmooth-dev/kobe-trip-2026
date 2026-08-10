@@ -54,7 +54,7 @@
     .hero-card .val{font-size:18px;font-weight:900;color:#4a403d;line-height:1.45}.fixed-times-title{position:relative;z-index:2;font-size:12px;font-weight:900;letter-spacing:.08em;color:#d76472;margin:2px 0 6px 2px}.fixed-times{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;position:relative;z-index:2}.fixed-item{background:#fffdfb;border:2px solid #f1dfd7;border-radius:16px;padding:9px 10px;text-align:center}.fixed-label{display:block;font-size:12px;font-weight:900;color:#d76472;line-height:1.4;margin-bottom:2px}.fixed-value{display:block;font-size:17px;font-weight:900;color:#4a403d;line-height:1.35}
     .hero-art{position:absolute;left:0;right:0;bottom:0;width:100%;height:98px;opacity:.18;pointer-events:none}
     .jump-nav{margin-top:14px;display:flex;flex-wrap:wrap;gap:7px;background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.95);border-radius:20px;padding:11px;box-shadow:var(--shadow);backdrop-filter:blur(6px)}
-    .jump-nav a{flex:1 1 104px;min-width:96px;text-align:center;text-decoration:none;color:#d76472;background:#fff6f7;border:1px solid #f2dfe4;border-radius:999px;padding:6px 8px;font-size:15px;font-weight:900;line-height:1.45}
+    .jump-nav a{flex:1 1 104px;min-width:96px;text-align:center;text-decoration:none;color:#d76472;background:#fff6f7;border:1px solid #f2dfe4;border-radius:999px;padding:6px 8px;font-size:15px;font-weight:900;line-height:1.45;white-space:nowrap}
     .section[id]{scroll-margin-top:16px}
     .weather-bar{margin-top:14px;display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:13px 16px;box-shadow:var(--shadow)}
     .weather-icon{font-size:32px;line-height:1}.weather-title{font-size:20px;font-weight:900;color:#d76472}.weather-detail{font-size:17px;color:var(--sub)}
@@ -104,12 +104,12 @@
   </header>
 
   <nav class="jump-nav" aria-label="ページ内メニュー">
-    <a href="#overview">🧭 概要</a><a href="#schedule">⏱️ 旅程</a><a href="#navigation">🗺️ ナビ</a><a href="#spots">📍 スポット</a><a href="#souvenirs">🎁 おみやげ</a><a href="#packing">🎒 持ち物</a><a href="#day-links">🔗 当日確認</a>
+    <a href="#overview">🧭 概要</a><a href="#schedule">⏱️ 旅程</a><a href="#navigation">🗺️ ナビ</a><a href="#spots">📍 スポット</a><a href="#souvenirs">🎁 おみやげ</a><a href="#packing">🎒 持ち物</a><a href="#day-links">🔗 リンク</a>
   </nav>
 
   <div class="weather-bar">
     <div class="weather-icon">🌦️</div>
-    <div><div class="weather-title">8/17（月）神戸市（兵庫県）</div><div class="weather-detail">現時点では、午後はにわか雨の時間があり31～32℃。夕方以降は曇り、19時頃31℃・20時頃30℃前後。予報は変わる可能性があるため当日に再確認。</div></div>
+    <div><div class="weather-title">8/17（月）神戸市</div><div class="weather-detail">現時点では、午後はにわか雨の時間があり31～32℃。夕方以降は曇り、19時頃31℃・20時頃30℃前後。予報は変わる可能性があるため当日に再確認。</div></div>
   </div>
 
   <section class="section" id="overview">
@@ -176,9 +176,9 @@
   </section>
 
   <section class="section" id="day-links">
-    <div class="section-title">🔗 当日確認リンク</div>
+    <div class="section-title">🔗 リンク</div>
     <ul class="source-list">
-      <li><a class="check-link" href="https://www.jma.go.jp/bosai/forecast/">気象庁 天気予報</a><span class="check-desc">神戸の天気・降水・気温を確認</span></li>
+      <li><a class="check-link" href="https://www.jma.go.jp/bosai/forecast/#area_type=class20s&amp;area_code=2811000">神戸市中央区の天気予報</a><span class="check-desc">神戸市中央区の天気・降水確率・気温を確認</span></li>
       <li><a class="check-link" href="https://www.hanshin-exp.co.jp/drivers/douro/">阪神高速 交通情報</a><span class="check-desc">渋滞・事故・通行止めを確認</span></li>
       <li><a class="check-link" href="https://dickbrunatable.com/">Dick Bruna TABLE 公式</a><span class="check-desc">当日の営業・コラボ／4F案内を確認</span></li>
       <li><a class="check-link" href="https://www.kobe-port-tower.com/">神戸ポートタワー 公式</a><span class="check-desc">営業状況・ミッフィーコラボ案内を確認</span></li>
