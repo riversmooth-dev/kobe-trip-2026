@@ -67,7 +67,7 @@
     .tag{display:inline-block;font-size:14px;font-weight:900;border-radius:999px;padding:3px 10px;margin-bottom:6px}.tag-pink{background:#fde8ee;border:1px solid #f4becb;color:#c84c64}.tag-yellow{background:#fff4be;border:1px solid #ead371;color:#846a00}.tag-blue{background:#e5f5fb;border:1px solid #add9ea;color:#3a738c}.tag-night{background:#e8edf4;border:1px solid #b8c3d0;color:#45596c}
     .nav-list{list-style:none;margin-top:10px}.nav-list li{display:flex;gap:10px;align-items:baseline;background:#fffefa;border:1px solid var(--line);border-radius:13px;padding:10px 13px;margin-bottom:8px;font-size:18px}.nav-num{font-size:16px;font-weight:900;color:#d79b00;min-width:1.9em}.nav-name{font-weight:800;color:#514340}.nav-addr{font-size:16px;color:var(--sub);display:block;margin-top:1px}
     .callout{border-radius:14px;padding:12px 14px;font-size:17px;margin-top:10px;line-height:1.65}.callout-warn{background:#fff8df;border:1px solid #ead27f;border-left:5px solid #d79b00;color:#745c00}
-    .source-list{font-size:15px;color:var(--sub);padding-left:1.3em}.source-list li{margin:8px 0;line-height:1.55}.footer{text-align:center;font-size:16px;color:#9f5666;opacity:.8;padding:24px 0 8px}
+    .source-list{font-size:15px;color:var(--sub);padding-left:1.3em}.source-list li{margin:10px 0;line-height:1.5}.source-list .check-link{display:block;font-weight:800;margin-bottom:2px}.source-list .check-desc{display:block;font-size:15px;color:var(--sub)}.footer{text-align:center;font-size:16px;color:#9f5666;opacity:.8;padding:24px 0 8px}
     .rabbit-divider{text-align:center;color:#d85e72;font-weight:900;letter-spacing:.05em;margin-top:4px}
     @media(min-width:600px){.card-grid-2{grid-template-columns:1fr 1fr}}
     @media(min-width:640px){.page{padding:24px 20px 60px}.section{padding:22px}.hero{padding:33px 28px 44px}.hero-grid{grid-template-columns:repeat(4,1fr)}}
@@ -167,14 +167,14 @@
   <section class="section" id="day-links">
     <div class="section-title">🔗 当日確認リンク</div>
     <ul class="source-list">
-      <li><a href="https://www.jma.go.jp/bosai/forecast/">気象庁 天気予報</a> — 神戸の天気・降水・気温を確認</li>
-      <li><a href="https://www.hanshin-exp.co.jp/drivers/douro/">阪神高速 交通情報</a> — 渋滞・事故・通行止めを確認</li>
-      <li><a href="https://dickbrunatable.com/">Dick Bruna TABLE 公式</a> — 当日の営業・コラボ／4F案内を確認</li>
-      <li><a href="https://www.kobe-port-tower.com/">神戸ポートタワー 公式</a> — 営業状況・ミッフィーコラボ案内を確認</li>
-      <li><a href="https://umie.jp/">神戸ハーバーランド umie 公式</a> — 営業時間・MOSAICの店舗情報を確認</li>
-      <li><a href="https://kobe-toll-road.or.jp/parking/sannomiya/">三宮中央通り駐車場 公式</a> — 営業時間・料金を確認</li>
-      <li><a href="https://times-info.net/P28-hyogo/C110/park-detail-BUK0017660/">タイムズ「メリケンパーク」 公式</a> — 満車・空車、料金を確認</li>
-      <li><a href="https://www.tri-well.com/%E3%83%87%E3%83%93%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%EF%BC%92/">デビスパーキング2（海岸通）</a> — 予備駐車場の料金・利用条件を確認</li>
+      <li><a class="check-link" href="https://www.jma.go.jp/bosai/forecast/">気象庁 天気予報</a><span class="check-desc">神戸の天気・降水・気温を確認</span></li>
+      <li><a class="check-link" href="https://www.hanshin-exp.co.jp/drivers/douro/">阪神高速 交通情報</a><span class="check-desc">渋滞・事故・通行止めを確認</span></li>
+      <li><a class="check-link" href="https://dickbrunatable.com/">Dick Bruna TABLE 公式</a><span class="check-desc">当日の営業・コラボ／4F案内を確認</span></li>
+      <li><a class="check-link" href="https://www.kobe-port-tower.com/">神戸ポートタワー 公式</a><span class="check-desc">営業状況・ミッフィーコラボ案内を確認</span></li>
+      <li><a class="check-link" href="https://umie.jp/">神戸ハーバーランド umie 公式</a><span class="check-desc">営業時間・MOSAICの店舗情報を確認</span></li>
+      <li><a class="check-link" href="https://kobe-toll-road.or.jp/parking/sannomiya/">三宮中央通り駐車場 公式</a><span class="check-desc">営業時間・料金を確認</span></li>
+      <li><a class="check-link" href="https://times-info.net/P28-hyogo/C110/park-detail-BUK0017660/">タイムズ「メリケンパーク」 公式</a><span class="check-desc">満車・空車、料金を確認</span></li>
+      <li><a class="check-link" href="https://www.tri-well.com/%E3%83%87%E3%83%93%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%EF%BC%92/">デビスパーキング2（海岸通）</a><span class="check-desc">予備駐車場の料金・利用条件を確認</span></li>
     </ul>
   </section>
 
