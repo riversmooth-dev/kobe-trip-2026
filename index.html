@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7b7c7" />
+  <title>神戸・ミッフィーおでかけしおり｜2026.08.17</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --pink:#f3c8d1;
+      --pink-2:#ffe7ec;
+      --coral:#e79bab;
+      --red:#d57a8d;
+      --yellow:#f2d9a1;
+      --yellow-soft:#fff3d4;
+      --blue:#bfddea;
+      --blue-soft:#edf7fb;
+      --navy:#66737a;
+      --cream:#fffaf4;
+      --paper:#fffdfa;
+      --text:#4a403d;
+      --sub:#7a6f6b;
+      --line:#f1dfd7;
+      --shadow:0 10px 25px rgba(0,0,0,0.06);
+      --card:rgba(255,255,255,.96);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 14px 14px, rgba(255,255,255,.88) 2px, transparent 2.5px) 0 0/28px 28px,
+        linear-gradient(180deg,#fffaf4 0%,#fff4f6 100%);
+      min-height:100vh;font-size:20px;line-height:1.8
+    }
+    a{color:#c94f66;text-underline-offset:3px}
+    .page{max-width:840px;margin:0 auto;padding:18px 14px 52px}
+    .hero{
+      position:relative;overflow:hidden;border-radius:30px;padding:29px 22px 42px;
+      background:linear-gradient(180deg,#fffdfa 0%,#fff7fa 100%);
+      border:3px solid #ffe4e8;
+      box-shadow:0 10px 25px rgba(0,0,0,0.06);color:#4a403d
+    }
+    .hero-badge{display:inline-block;position:relative;z-index:2;font-size:14px;font-weight:900;letter-spacing:.1em;background:#fff1f3;border:2px solid #ffd7df;border-radius:999px;padding:5px 12px;margin-bottom:14px;color:#ef6f83}
+    .hero h1{position:relative;z-index:2;font-size:clamp(29px,6.5vw,42px);font-weight:900;line-height:1.28;margin-bottom:8px;color:#d76472;max-width:620px}
+    .hero-sub{position:relative;z-index:2;font-size:18px;color:#7a6f6b;margin-bottom:18px;max-width:590px}
+    .hero-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;position:relative;z-index:2}
+    .hero-card{background:#fffdfb;border:2px solid #f1dfd7;border-radius:18px;padding:10px 13px}
+    .hero-card .lbl{font-size:14px;font-weight:900;letter-spacing:.06em;color:#d76472;margin-bottom:3px}
+    .hero-card .val{font-size:18px;font-weight:900;color:#4a403d;line-height:1.45}
+    .hero-art{position:absolute;left:0;right:0;bottom:0;width:100%;height:98px;opacity:.18;pointer-events:none}
+    .jump-nav{margin-top:14px;display:flex;flex-wrap:wrap;gap:7px;background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.95);border-radius:20px;padding:11px;box-shadow:var(--shadow);backdrop-filter:blur(6px)}
+    .jump-nav a{flex:1 1 104px;min-width:96px;text-align:center;text-decoration:none;color:#d76472;background:#fff6f7;border:1px solid #f2dfe4;border-radius:999px;padding:6px 8px;font-size:15px;font-weight:900;line-height:1.45}
+    .section[id]{scroll-margin-top:16px}
+    .weather-bar{margin-top:14px;display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:13px 16px;box-shadow:var(--shadow)}
+    .weather-icon{font-size:32px;line-height:1}.weather-title{font-size:20px;font-weight:900;color:#d76472}.weather-detail{font-size:17px;color:var(--sub)}
+    .section{margin-top:14px;background:var(--card);border:1px solid rgba(255,255,255,.9);border-radius:24px;box-shadow:var(--shadow);padding:20px 18px}
+    .section-title{font-size:22px;font-weight:900;color:#d76472;margin-bottom:14px;display:flex;align-items:center;gap:8px}.section-title::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,#f2d9a1,transparent);border-radius:999px}
+    .timeline{position:relative;padding-left:24px;margin-top:8px}.timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:3px;background:linear-gradient(180deg,var(--pink),var(--yellow),var(--blue));border-radius:999px;opacity:.9}
+    .tl-item{position:relative;padding:0 0 16px 12px}.tl-item::before{content:"";position:absolute;left:-19px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 3px rgba(239,127,145,.17)}.tl-item.highlight::before{background:var(--yellow);box-shadow:0 0 0 4px rgba(244,211,94,.2)}
+    .tl-time{font-size:16px;font-weight:900;color:#e86c7b;letter-spacing:.04em}.tl-name{font-size:21px;font-weight:900;color:#514340;line-height:1.45}.tl-desc{font-size:17px;color:var(--sub);line-height:1.65;margin-top:2px}
+    .card-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:10px}.card{background:#fffefa;border:1px solid var(--line);border-radius:16px;padding:14px 15px}.card-title{font-size:20px;font-weight:900;color:#514340;margin-bottom:6px}.card p,.card li{font-size:17px;color:var(--sub);line-height:1.65}.card ul{padding-left:1.3em}.card li{margin:4px 0}
+    .tag{display:inline-block;font-size:14px;font-weight:900;border-radius:999px;padding:3px 10px;margin-bottom:6px}.tag-pink{background:#fde8ee;border:1px solid #f4becb;color:#c84c64}.tag-yellow{background:#fff4be;border:1px solid #ead371;color:#846a00}.tag-blue{background:#e5f5fb;border:1px solid #add9ea;color:#3a738c}.tag-night{background:#e8edf4;border:1px solid #b8c3d0;color:#45596c}
+    .nav-list{list-style:none;margin-top:10px}.nav-list li{display:flex;gap:10px;align-items:baseline;background:#fffefa;border:1px solid var(--line);border-radius:13px;padding:10px 13px;margin-bottom:8px;font-size:18px}.nav-num{font-size:16px;font-weight:900;color:#d79b00;min-width:1.9em}.nav-name{font-weight:800;color:#514340}.nav-addr{font-size:16px;color:var(--sub);display:block;margin-top:1px}
+    .callout{border-radius:14px;padding:12px 14px;font-size:17px;margin-top:10px;line-height:1.65}.callout-warn{background:#fff8df;border:1px solid #ead27f;border-left:5px solid #d79b00;color:#745c00}
+    .source-list{font-size:15px;color:var(--sub);padding-left:1.3em}.source-list li{margin:5px 0}.footer{text-align:center;font-size:16px;color:#9f5666;opacity:.8;padding:24px 0 8px}
+    .rabbit-divider{text-align:center;color:#d85e72;font-weight:900;letter-spacing:.05em;margin-top:4px}
+    @media(min-width:600px){.card-grid-2{grid-template-columns:1fr 1fr}}
+    @media(min-width:640px){.page{padding:24px 20px 60px}.section{padding:22px}.hero{padding:33px 28px 44px}.hero-grid{grid-template-columns:repeat(4,1fr)}}
+    @media print{body{background:#fff;font-size:15px}.page{max-width:none;padding:0}.hero,.section,.weather-bar{box-shadow:none;break-inside:avoid}.section{margin-top:9px}a{color:inherit;text-decoration:none}}
+  </style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="hero-badge">Kobe Miffy Day · 2026.08.17 Mon</div>
+    <h1>神戸・ミッフィー<br>アフタヌーンと夜景の一日</h1>
+    <p class="hero-sub">午後はディック・ブルーナ テーブルでゆっくり。夕方からはポートタワーへ移動して、ミッフィーのコラボと神戸の夜景を楽しむ一日。</p>
+    <div class="hero-grid">
+      <div class="hero-card"><div class="lbl">出発地</div><div class="val">東大阪市</div></div>
+      <div class="hero-card"><div class="lbl">出発時刻</div><div class="val">13:00</div></div>
+      <div class="hero-card"><div class="lbl">往路</div><div class="val">高速<br>湾岸線</div></div>
+      <div class="hero-card"><div class="lbl">主役</div><div class="val">ミッフィー<br>神戸の夜景</div></div>
+    </div>
+    <svg class="hero-art" viewBox="0 0 840 98" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0,98 L0,66 Q94,30 188,61 Q284,94 378,57 Q472,25 566,62 Q662,96 752,55 Q803,33 840,42 L840,98 Z" fill="#fff5f7"/>
+      <path d="M0,88 C150,68 244,95 356,83 C481,70 588,95 840,70" fill="none" stroke="#fff2a8" stroke-width="4" opacity=".9"/>
+    </svg>
+  </header>
+
+  <nav class="jump-nav" aria-label="ページ内メニュー">
+    <a href="#overview">🧭 概要</a><a href="#schedule">⏱️ 旅程</a><a href="#navigation">🗺️ ナビ</a><a href="#spots">📍 スポット</a><a href="#souvenirs">🎁 おみやげ</a><a href="#packing">🎒 持ち物</a><a href="#day-links">🔗 当日確認</a>
+  </nav>
+
+  <div class="weather-bar">
+    <div class="weather-icon">🌦️</div>
+    <div><div class="weather-title">8/17（月）神戸市（兵庫県）</div><div class="weather-detail">現時点では、午後はにわか雨の時間があり31～32℃。夕方以降は曇り、19時頃31℃・20時頃30℃前後。予報は変わる可能性があるため当日に再確認。</div></div>
+  </div>
+
+  <section class="section" id="overview">
+    <div class="section-title">🧭 概要</div>
+    <p style="font-size:17px;color:var(--sub)">湾岸線経由で神戸へ。ディック・ブルーナの世界観を楽しめる「Dick Bruna TABLE」でアフタヌーンティーとコラボグッズを楽しみ、その後は神戸ポートタワーのミッフィーコラボと神戸港の夜景へ。最後は神戸ハーバーランドで夕食。</p>
+  </section>
+
+  <section class="section" id="schedule">
+    <div class="section-title">⏱️ 旅程</div>
+    <p style="font-size:17px;color:var(--sub);margin-bottom:14px"><strong>往路</strong>　東大阪市 → 阪神高速 → 湾岸線 → 神戸・元町<br><strong>後半</strong>　三宮中央通り駐車場 → タイムズ「メリケンパーク」 → 神戸ポートタワー → 神戸ハーバーランド umie MOSAIC</p>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-time">13:00</div><div class="tl-name">🚗 東大阪市 出発</div><div class="tl-desc">往路は高速。湾岸線を基本に、神戸中心部へ。出発前に事故・渋滞情報を確認。</div></div>
+      <div class="tl-item"><div class="tl-time">14:00～14:15頃</div><div class="tl-name">🅿️ 三宮中央通り駐車場</div><div class="tl-desc">駐車位置と出口番号はスマホで撮影しておく。</div></div>
+      <div class="tl-item"><div class="tl-time">14:40～14:45頃</div><div class="tl-name">🐇 Dick Bruna TABLE 到着</div><div class="tl-desc">余裕をもって到着。</div></div>
+      <div class="tl-item highlight"><div class="tl-time">15:00～</div><div class="tl-name">🫖 アフタヌーンティー</div><div class="tl-desc">今回のメイン。ミッフィーの世界観を楽しみながら、ゆっくり過ごす。</div></div>
+      <div class="tl-item"><div class="tl-time">16:00以降</div><div class="tl-name">🎁 4F特設フロアでコラボグッズ</div><div class="tl-desc">飲食利用者は16:00から、席で案内されるQRコードで4F特設フロアの順番待ち登録が可能。17:00からはNIGHT商品の販売も始まる。</div></div>
+      <div class="tl-item"><div class="tl-time">18:15頃</div><div class="tl-name">🚗 タイムズ「メリケンパーク」へ移動</div><div class="tl-desc">三宮中央通り駐車場を出庫し、2つ目の駐車場へ。ポートタワー近くに停め直して、19時前後の入場以降は徒歩中心で動く。</div></div>
+      <div class="tl-item highlight"><div class="tl-time">19:00～20:00</div><div class="tl-name">🗼 神戸ポートタワー・夜景</div><div class="tl-desc">ミッフィーコラボを楽しみながら展望フロアへ。日没後の神戸港の夜景も楽しむ。屋上デッキは天候・風の状況に応じて。</div></div>
+      <div class="tl-item"><div class="tl-time">20:15～21:15頃</div><div class="tl-name">🍽️ MOSAIC周辺で夕食</div><div class="tl-desc"></div></div>
+      <div class="tl-item"><div class="tl-time">21:30～21:45頃</div><div class="tl-name">🌙 神戸 出発</div><div class="tl-desc">復路も高速。疲労と渋滞を見て、楽なルートを優先。</div></div>
+      <div class="tl-item"><div class="tl-time">22:45～23:15頃</div><div class="tl-name">🏠 東大阪市 帰着</div><div class="tl-desc">道路状況により前後。帰着時刻より安全を優先。</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="navigation">
+    <div class="section-title">🗺️ ナビ設定順</div>
+    <ol class="nav-list">
+      <li><span class="nav-num">1</span><div><span class="nav-name">三宮中央通り駐車場</span><span class="nav-addr">兵庫県神戸市中央区三宮町1丁目 ／ 前半用</span></div></li>
+      <li><span class="nav-num">2</span><div><span class="nav-name">Dick Bruna TABLE KOBE</span><span class="nav-addr">兵庫県神戸市中央区三宮町3丁目1-1</span></div></li>
+      <li><span class="nav-num">3</span><div><span class="nav-name">タイムズ「メリケンパーク」</span><span class="nav-addr">兵庫県神戸市中央区波止場町2 ／ 後半用</span></div></li>
+      <li><span class="nav-num">4</span><div><span class="nav-name">神戸ポートタワー</span><span class="nav-addr">兵庫県神戸市中央区波止場町5-5</span></div></li>
+      <li><span class="nav-num">帰</span><div><span class="nav-name">東大阪市</span><span class="nav-addr">復路も高速。疲労・渋滞状況に応じて楽なルートを選択。</span></div></li>
+    </ol>
+    <div class="callout callout-warn"><strong>当日のポイント：</strong>出発直前に阪神高速の渋滞・事故情報を確認。</div>
+  </section>
+
+  <section class="section" id="spots">
+    <div class="section-title">📍 スポット別メモ</div>
+    <div class="card-grid card-grid-2">
+      <div class="card"><span class="tag tag-pink">今日の主役</span><div class="card-title">🐇 Dick Bruna TABLE</div><p>ディック・ブルーナの世界観を楽しめるカフェ＆レストラン。15:00～のアフタヌーンティーが今回の軸。16:00からQRコードで4F特設フロアの順番待ち登録ができ、17:00からNIGHT商品が販売される。</p></div>
+      <div class="card"><span class="tag tag-yellow">夜の主役</span><div class="card-title">🗼 神戸ポートタワー</div><p>館内のミッフィー装飾やコラボ企画を楽しみながら展望フロアへ。日没後の神戸港の夜景を楽しむ。19:00～20:00の入場枠を予約済み。</p></div>
+      <div class="card"><span class="tag tag-pink">1つ目の駐車場</span><div class="card-title">🅿️ 三宮中央通り駐車場</div><p>Dick Bruna TABLEへ行く前半用の地下駐車場。三宮・元町・旧居留地の中間にあり、地下通路から周辺へ移動しやすい。488台、7:00～24:00（入庫は23:00まで）。料金は最初の30分250円、以降12分100円、平日上限1,530円。駐車場内は迷いやすいため、停めた区画・出口番号をスマホで撮っておく。</p></div>
+      <div class="card"><span class="tag tag-blue">2つ目の駐車場</span><div class="card-title">🅿️ タイムズ「メリケンパーク」</div><p>ポートタワー・ハーバーランド側の後半用駐車場。三宮中央通り駐車場から車を移し、ここからは徒歩中心。110台・24時間入出庫可。月～金は最初の60分無料、以降30分210円、20:00～8:00最大840円。</p></div>
+      <div class="card"><span class="tag tag-night">締め</span><div class="card-title">🍽️ 神戸ハーバーランド umie MOSAIC</div><p>飲食店やショップが集まる海辺の商業施設。夜景の余韻を楽しみながら夕食。</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="souvenirs">
+    <div class="section-title">🎁 おみやげ候補</div>
+    <div class="card-grid card-grid-2">
+      <div class="card"><span class="tag tag-pink">ミッフィー</span><div class="card-title">🐇 コラボグッズ</div><p>Dick Bruna TABLEと神戸ポートタワーの両方で、気になる限定品をチェック。</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="packing">
+    <div class="section-title">🎒 持ち物チェック</div>
+    <div class="card-grid card-grid-2">
+      <div class="card"><span class="tag tag-pink">ドライブ</span><ul><li>免許証・ETCカード</li><li>スマートフォン</li><li>飲み物</li><li>財布・クレジットカード</li></ul></div>
+      <div class="card"><span class="tag tag-blue">真夏対策</span><ul><li>晴雨兼用の折りたたみ傘</li><li>汗ふきシート</li><li>ハンカチ</li><li>冷房対策の羽織りもの</li></ul></div>
+    </div>
+  </section>
+
+  <section class="section" id="day-links">
+    <div class="section-title">🔗 当日確認リンク</div>
+    <ul class="source-list">
+      <li><a href="https://dickbrunatable.com/">Dick Bruna TABLE 公式</a></li>
+      <li><a href="https://www.kobe-port-tower.com/">神戸ポートタワー 公式</a></li>
+      <li><a href="https://umie.jp/">神戸ハーバーランド umie 公式</a></li>
+      <li><a href="https://www.hanshin-exp.co.jp/">阪神高速 公式</a></li>
+      <li><a href="https://kobe-toll-road.or.jp/parking/sannomiya/">三宮中央通り駐車場 公式</a></li>
+      <li><a href="https://times-info.net/P28-hyogo/C110/park-detail-BUK0017660/">タイムズ「メリケンパーク」 公式</a></li>
+    </ul>
+  </section>
+
+  <div class="rabbit-divider">(・×・)</div>
+  <div class="footer">🐇 神戸・ミッフィー アフタヌーンと夜景のおでかけしおり 2026.08.17（月）｜東大阪市 発</div>
+</div>
+</body>
+</html>
