@@ -51,7 +51,7 @@
     .hero-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;position:relative;z-index:2}
     .hero-card{background:#fffdfb;border:2px solid #f1dfd7;border-radius:18px;padding:10px 13px}
     .hero-card .lbl{font-size:14px;font-weight:900;letter-spacing:.06em;color:#d76472;margin-bottom:3px}
-    .hero-card .val{font-size:18px;font-weight:900;color:#4a403d;line-height:1.45}
+    .hero-card .val{font-size:18px;font-weight:900;color:#4a403d;line-height:1.45}.fixed-times-title{position:relative;z-index:2;font-size:12px;font-weight:900;letter-spacing:.08em;color:#d76472;margin:2px 0 6px 2px}.fixed-times{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;position:relative;z-index:2}.fixed-item{background:#fffdfb;border:2px solid #f1dfd7;border-radius:16px;padding:9px 10px;text-align:center}.fixed-label{display:block;font-size:12px;font-weight:900;color:#d76472;line-height:1.4;margin-bottom:2px}.fixed-value{display:block;font-size:17px;font-weight:900;color:#4a403d;line-height:1.35}
     .hero-art{position:absolute;left:0;right:0;bottom:0;width:100%;height:98px;opacity:.18;pointer-events:none}
     .jump-nav{margin-top:14px;display:flex;flex-wrap:wrap;gap:7px;background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.95);border-radius:20px;padding:11px;box-shadow:var(--shadow);backdrop-filter:blur(6px)}
     .jump-nav a{flex:1 1 104px;min-width:96px;text-align:center;text-decoration:none;color:#d76472;background:#fff6f7;border:1px solid #f2dfe4;border-radius:999px;padding:6px 8px;font-size:15px;font-weight:900;line-height:1.45}
@@ -72,6 +72,17 @@
     @media(min-width:600px){.card-grid-2{grid-template-columns:1fr 1fr}}
     @media(min-width:640px){.page{padding:24px 20px 60px}.section{padding:22px}.hero{padding:33px 28px 44px}.hero-grid{grid-template-columns:repeat(4,1fr)}}
     @media print{body{background:#fff;font-size:15px}.page{max-width:none;padding:0}.hero,.section,.weather-bar{box-shadow:none;break-inside:avoid}.section{margin-top:9px}a{color:inherit;text-decoration:none}}
+  
+    @media (max-width: 480px){
+      .hero h1{font-size:26px}
+      .hero h1 .hero-line2{font-size:1em}
+      .fixed-times{gap:6px}
+      .fixed-item{padding:8px 6px}
+      .fixed-label{font-size:11px}
+      .fixed-value{font-size:15px}
+    }
+
+  .map-link{display:inline-block;margin-top:5px;font-size:14px;font-weight:800;text-decoration:none;color:#c94f66}
   </style>
 </head>
 <body>
@@ -80,11 +91,11 @@
     <div class="hero-badge">Kobe Miffy Day · 2026.08.17 Mon</div>
     <h1>神戸・ミッフィー<br><span class="hero-line2">アフタヌーンと夜景の一日</span></h1>
     <p class="hero-sub hero-sub-small">午後はディック・ブルーナ テーブルでゆっくり。夕方からはポートタワーへ移動して、ミッフィーのコラボと神戸の夜景を楽しむ一日。</p>
-    <div class="hero-grid">
-      <div class="hero-card"><div class="lbl">出発地</div><div class="val">東大阪市</div></div>
-      <div class="hero-card"><div class="lbl">出発時刻</div><div class="val">13:00</div></div>
-      <div class="hero-card"><div class="lbl">往路</div><div class="val">高速<br>湾岸線</div></div>
-      <div class="hero-card"><div class="lbl">主役</div><div class="val">ミッフィー<br>神戸の夜景</div></div>
+    <div class="fixed-times-title">出発・予約・固定時刻</div>
+    <div class="fixed-times" aria-label="出発・予約・固定時刻">
+      <div class="fixed-item"><span class="fixed-label">出発</span><span class="fixed-value">13:00</span></div>
+      <div class="fixed-item"><span class="fixed-label">Dick Bruna TABLE</span><span class="fixed-value">15:00</span></div>
+      <div class="fixed-item"><span class="fixed-label">神戸ポートタワー</span><span class="fixed-value">19:00～20:00</span></div>
     </div>
     <svg class="hero-art" viewBox="0 0 840 98" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M0,98 L0,66 Q94,30 188,61 Q284,94 378,57 Q472,25 566,62 Q662,96 752,55 Q803,33 840,42 L840,98 Z" fill="#fff5f7"/>
@@ -127,13 +138,13 @@
   <section class="section" id="navigation">
     <div class="section-title">🗺️ ナビ設定順</div>
     <ol class="nav-list">
-      <li><span class="nav-num">1</span><div><span class="nav-name">三宮中央通り駐車場</span><span class="nav-addr">兵庫県神戸市中央区三宮町1丁目 ／ 前半用</span></div></li>
-      <li><span class="nav-num">2</span><div><span class="nav-name">Dick Bruna TABLE KOBE</span><span class="nav-addr">兵庫県神戸市中央区三宮町3丁目1-1</span></div></li>
-      <li><span class="nav-num">3</span><div><span class="nav-name">umieモザイク駐車場（P6）</span><span class="nav-addr">兵庫県神戸市中央区東川崎町1丁目6-1 ／ 後半用</span></div></li>
-      <li><span class="nav-num">4</span><div><span class="nav-name">神戸ポートタワー（徒歩）</span><span class="nav-addr">兵庫県神戸市中央区波止場町5-5</span></div></li>
+      <li><span class="nav-num">1</span><div><span class="nav-name">三宮中央通り駐車場</span><span class="nav-addr">兵庫県神戸市中央区三宮町1丁目 ／ 前半用</span><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E5%AE%AE%E4%B8%AD%E5%A4%AE%E9%80%9A%E3%82%8A%E9%A7%90%E8%BB%8A%E5%A0%B4%20%E7%A5%9E%E6%88%B8" target="_blank" rel="noopener">📍 地図を開く</a></div></li>
+      <li><span class="nav-num">2</span><div><span class="nav-name">Dick Bruna TABLE KOBE</span><span class="nav-addr">兵庫県神戸市中央区三宮町3丁目1-1</span><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Dick%20Bruna%20TABLE%20KOBE%20%E7%A5%9E%E6%88%B8%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E4%B8%89%E5%AE%AE%E7%94%BA3%E4%B8%81%E7%9B%AE1-1" target="_blank" rel="noopener">📍 地図を開く</a></div></li>
+      <li><span class="nav-num">3</span><div><span class="nav-name">umieモザイク駐車場（P6）</span><span class="nav-addr">兵庫県神戸市中央区東川崎町1丁目6-1 ／ 後半用</span><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=umie%20%E3%83%A2%E3%82%B6%E3%82%A4%E3%82%AF%E9%A7%90%E8%BB%8A%E5%A0%B4%20P6%20%E7%A5%9E%E6%88%B8" target="_blank" rel="noopener">📍 地図を開く</a></div></li>
+      <li><span class="nav-num">4</span><div><span class="nav-name">神戸ポートタワー（徒歩）</span><span class="nav-addr">兵庫県神戸市中央区波止場町5-5</span><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E6%88%B8%E3%83%9D%E3%83%BC%E3%83%88%E3%82%BF%E3%83%AF%E3%83%BC" target="_blank" rel="noopener">📍 地図を開く</a></div></li>
       <li><span class="nav-num">帰</span><div><span class="nav-name">東大阪市</span><span class="nav-addr">復路も高速。疲労・渋滞状況に応じて楽なルートを選択。</span></div></li>
     </ol>
-    <div class="callout" style="background:#fffaf0;border:1px solid #ead9b2;color:#705f43"><strong>前半の予備駐車場：</strong>第1予備：デビスパーキング1（元町）［兵庫県神戸市中央区西町34］ ／ 第2予備：デビスパーキング2（海岸通）［兵庫県神戸市中央区海岸通10］。三宮中央通り駐車場が満車の場合に順番に検討。</div>
+    <div class="callout" style="background:#fffaf0;border:1px solid #ead9b2;color:#705f43"><strong>前半の予備駐車場：</strong>デビスパーキング1（元町）［兵庫県神戸市中央区西町34］。三宮中央通り駐車場が満車の場合の候補。 <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E3%83%87%E3%83%93%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B01%20%E5%85%83%E7%94%BA%20%E7%A5%9E%E6%88%B8%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E8%A5%BF%E7%94%BA34" target="_blank" rel="noopener">📍 地図を開く</a></div>
     <div class="callout callout-warn"><strong>当日のポイント：</strong>出発直前に阪神高速の渋滞・事故情報を確認。</div>
   </section>
 
@@ -141,10 +152,10 @@
     <div class="section-title">📍 スポット別メモ</div>
     <div class="card-grid card-grid-2">
       <div class="card"><span class="tag tag-pink">今日の主役</span><div class="card-title">🐇 Dick Bruna TABLE</div><p>ディック・ブルーナの世界観を楽しめるカフェ＆レストラン。15:00～のアフタヌーンティーが今回の軸。16:00からQRコードで4F特設フロアの順番待ち登録ができ、17:00からNIGHT商品が販売される。</p></div>
-      <div class="card"><span class="tag tag-yellow">夜の主役</span><div class="card-title">🗼 神戸ポートタワー</div><p>館内のミッフィー装飾やコラボ企画を楽しみながら展望フロアへ。日没後の神戸港の夜景を楽しむ。19:00～20:00の入場枠を予約済み。</p></div>
+      <div class="card"><span class="tag tag-yellow">夜の主役</span><div class="card-title">🗼 神戸ポートタワー</div><p>館内のミッフィー装飾やコラボ企画を楽しみながら展望フロアへ。8/17の神戸の日没は18:45頃。日没後の神戸港の夜景を楽しむ。19:00～20:00の入場枠を予約済み。</p></div>
       <div class="card"><span class="tag tag-pink">1つ目の駐車場</span><div class="card-title">🅿️ 三宮中央通り駐車場</div><p>Dick Bruna TABLEへ行く前半用の地下駐車場。三宮・元町・旧居留地の中間にあり、地下通路から周辺へ移動しやすい。488台、7:00～24:00（入庫は23:00まで）。料金は最初の30分250円、以降12分100円、平日上限1,530円。駐車場内は迷いやすいため、停めた区画・出口番号をスマホで撮っておく。</p></div>
       <div class="card"><span class="tag tag-blue">2つ目の駐車場</span><div class="card-title">🅿️ umieモザイク駐車場（P6）</div><p>ポートタワー・MOSAIC側の後半用駐車場。250台、9:00～24:30（入庫は22:30まで）。平日は3時間無料、以降30分200円。対象店舗で2,000円以上利用すると、さらに1時間無料。ポートタワー観覧後はMOSAICで夕食をとり、そのまま車へ戻りやすい。</p></div>
-      <div class="card"><span class="tag tag-yellow">前半・第1予備</span><div class="card-title">🅿️ デビスパーキング1（元町）</div><p>三宮中央通り駐車場が満車の場合の第1予備。兵庫県神戸市中央区西町34。自走式立体駐車場・270台、24時間営業。</p></div><div class="card"><span class="tag tag-yellow">前半・第2予備</span><div class="card-title">🅿️ デビスパーキング2（海岸通）</div><p>デビスパーキング1も利用しにくい場合の第2予備。兵庫県神戸市中央区海岸通10。自走式立体駐車場・504台、24時間営業。</p></div>
+      <div class="card"><span class="tag tag-yellow">前半・予備駐車場</span><div class="card-title">🅿️ デビスパーキング1（元町）</div><p>三宮中央通り駐車場が満車の場合の予備。兵庫県神戸市中央区西町34。自走式立体駐車場・270台、24時間営業。</p></div>
       <div class="card"><span class="tag tag-night">締め</span><div class="card-title">🍽️ 神戸ハーバーランド umie MOSAIC</div><p>飲食店やショップが集まる海辺の商業施設。夜景の余韻を楽しみながら夕食。</p></div>
     </div>
   </section>
@@ -174,7 +185,7 @@
       <li><a class="check-link" href="https://umie.jp/">神戸ハーバーランド umie 公式</a><span class="check-desc">営業時間・MOSAICの店舗情報を確認</span></li>
       <li><a class="check-link" href="https://kobe-toll-road.or.jp/parking/sannomiya/">三宮中央通り駐車場 公式</a><span class="check-desc">営業時間・料金を確認</span></li>
       <li><a class="check-link" href="https://umie.jp/static-pages/access">umie 駐車場・アクセス</a><span class="check-desc">モザイク駐車場（P6）の営業時間・料金・駐車サービスを確認</span></li>
-      <li><a class="check-link" href="https://www.tri-well.com/%E3%83%87%E3%83%93%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%EF%BC%91/">デビスパーキング1（元町）</a><span class="check-desc">前半・第1予備の料金・利用条件を確認</span></li><li><a class="check-link" href="https://www.tri-well.com/%E3%83%87%E3%83%93%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%EF%BC%92/">デビスパーキング2（海岸通）</a><span class="check-desc">前半・第2予備の料金・利用条件を確認</span></li>
+      <li><a class="check-link" href="https://www.tri-well.com/%E3%83%87%E3%83%93%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%EF%BC%91/">デビスパーキング1（元町）</a><span class="check-desc">前半の予備駐車場の料金・利用条件を確認</span></li>
     </ul>
   </section>
 
