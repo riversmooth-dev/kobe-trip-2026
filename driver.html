@@ -50,8 +50,6 @@
     .hero h1{position:relative;z-index:2;font-size:clamp(29px,6.5vw,42px);font-weight:900;line-height:1.28;margin-bottom:8px;color:#d76472;max-width:620px}.hero h1 .hero-line2{font-size:.90em;white-space:nowrap}
     .hero-sub{position:relative;z-index:2;font-size:18px;color:#7a6f6b;margin-bottom:18px;max-width:590px}.hero-sub-small{font-size:16px}.fixed-times-title{position:relative;z-index:2;font-size:12px;font-weight:900;letter-spacing:.08em;color:#d76472;margin:2px 0 6px 2px}.fixed-times{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;position:relative;z-index:2}.fixed-item{background:#fffdfb;border:2px solid #f1dfd7;border-radius:16px;padding:9px 10px;text-align:center}.fixed-label{display:block;font-size:12px;font-weight:900;color:#d76472;line-height:1.4;margin-bottom:2px}.fixed-value{display:block;font-size:17px;font-weight:900;color:#4a403d;line-height:1.35}
     .hero-art{position:absolute;left:0;right:0;bottom:0;width:100%;height:98px;opacity:.18;pointer-events:none}
-    .jump-nav{margin-top:14px;display:flex;flex-wrap:wrap;gap:7px;background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.95);border-radius:20px;padding:11px;box-shadow:var(--shadow);backdrop-filter:blur(6px)}
-    .jump-nav a{flex:1 1 104px;min-width:96px;text-align:center;text-decoration:none;color:#d76472;background:#fff6f7;border:1px solid #f2dfe4;border-radius:999px;padding:6px 8px;font-size:15px;font-weight:900;line-height:1.45;white-space:nowrap}
     .section[id]{scroll-margin-top:16px}
     .weather-bar{margin-top:14px;display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:13px 16px;box-shadow:var(--shadow)}
     .weather-icon{font-size:32px;line-height:1}.weather-title{font-size:20px;font-weight:900;color:#d76472}.weather-detail{font-size:17px;color:var(--sub)}
@@ -102,9 +100,6 @@
 <path d="M0,88 C150,68 244,95 356,83 C481,70 588,95 840,70" fill="none" opacity=".9" stroke="#fff2a8" stroke-width="4"></path>
 </svg>
 </header>
-<nav aria-label="ページ内メニュー" class="jump-nav">
-<a href="#overview">🧭 概要</a><a href="#schedule">⏱️ 旅程</a><a href="#navigation">🗺️ ナビ</a><a href="#spots">📍 スポット</a><a href="#souvenirs">🎁 おみやげ</a><a href="#day-check">✅ 当日確認</a><a href="#packing">🎒 持ち物</a><a href="#day-links">🔗 リンク</a>
-</nav>
 <div class="weather-bar">
 <div class="weather-icon">🌤️</div>
 <div><div class="weather-title">8/17（月）神戸市</div><div class="weather-detail">晴れ時々くもりの見込み。最高33℃・最低27℃前後、降水確率20％。午後は32℃前後、19～20時頃は29℃前後。暑さ対策を十分に行い、急な雨に備えて折りたたみ傘を持参。当日朝に再確認。</div></div>
@@ -171,7 +166,8 @@
 <div class="card-title">🏅 イベント限定記念メダル</div>
 <p><strong>700円</strong><br/>
           📍 <strong>神戸ポートタワー限定</strong><br/>
-          館内のメダル自販機で販売</p>
+          低層3階のメダル自販機で販売<br/>
+          刻印は別料金</p>
 </div>
 <div class="card">
 <span class="tag tag-blue">DAY／NIGHT</span>
@@ -195,6 +191,7 @@
           🌙 17:00～</p>
 </div>
 <div class="card"><span class="tag tag-yellow">DAY／NIGHT</span><div class="card-title">☁️ アクリルチャーム〈くも〉</div><p><strong>690円</strong><br/>DAY／NIGHT共通デザイン<br/>Dick Bruna TABLE・神戸ポートタワー<br/>☀️ 終日販売</p></div></div>
+<div class="callout" style="background:#eef6fb;border:1px solid #c9e4ee;color:#4f6f7d"><strong>8/17はナイトマーケットの開催なし。</strong> NIGHT商品は、Dick Bruna TABLE 4Fと神戸ポートタワー低層3階で17:00から販売予定。いずれも順番待ち・当日の在庫状況による。</div>
 </section>
 <section class="section" id="day-check">
 <div class="section-title">✅ 当日確認</div>
@@ -210,8 +207,8 @@
 <section class="section" id="packing">
 <div class="section-title">🎒 持ち物チェック</div>
 <div class="card-grid card-grid-2">
-<div class="card"><span class="tag tag-pink">ドライブ</span><ul><li>免許証・ETCカード</li><li>スマートフォン</li><li>飲み物</li><li>おみやげ予算</li></ul></div>
-<div class="card"><span class="tag tag-blue">真夏対策</span><ul><li>折りたたみ傘</li><li>ハンカチ</li><li>冷房対策の羽織りもの</li></ul></div>
+<div class="card"><span class="tag tag-pink">ドライブ・基本</span><ul><li>免許証・ETCカード</li><li>スマートフォン</li><li>財布</li><li>飲み物</li></ul></div>
+<div class="card"><span class="tag tag-blue">天気・冷房対策</span><ul><li>折りたたみ傘</li><li>薄手の羽織りもの</li></ul></div>
 </div>
 </section>
 <section class="section" id="day-links">
@@ -235,7 +232,7 @@
 </nav>
 <script>
 (function(){
-  var storageKey="kobe-miffy-v70-driver-day-checks";
+  var storageKey="kobe-miffy-v72-driver-day-checks";
   var boxes=document.querySelectorAll("[data-day-check]");
   var saved={};
   try{saved=JSON.parse(localStorage.getItem(storageKey)||"{}");}catch(e){saved={};}
