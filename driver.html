@@ -70,7 +70,7 @@
     @media(min-width:640px){.page{padding:24px 20px 60px}.section{padding:22px}.hero{padding:33px 28px 44px}}
     .page{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
     .checklist{display:grid;gap:9px}.check-item{display:flex;align-items:flex-start;gap:11px;background:#fffefa;border:1px solid var(--line);border-radius:14px;padding:11px 13px;font-size:17px;font-weight:700;color:#514340;cursor:pointer;transition:opacity .2s,background .2s}.check-item input{width:21px;height:21px;flex:0 0 auto;margin-top:4px;accent-color:#d76472}.check-item.done{opacity:.58;background:#faf7f3}.check-item.done span{text-decoration:line-through}.save-note{font-size:14px;color:var(--sub);margin-top:9px}
-    .bottom-nav{position:fixed;z-index:50;left:50%;bottom:0;transform:translateX(-50%);width:min(840px,100%);display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:4px 6px calc(4px + env(safe-area-inset-bottom));background:rgba(255,253,250,.96);border:1px solid #f1dfd7;border-bottom:0;border-radius:14px 14px 0 0;box-shadow:0 -6px 18px rgba(79,54,49,.11);backdrop-filter:blur(10px)}.bottom-nav a{display:flex;align-items:center;justify-content:center;min-height:32px;text-align:center;text-decoration:none;color:#d76472;background:#fff6f7;border:1px solid #f2dfe4;border-radius:10px;padding:5px 2px;font-size:12px;font-weight:900;line-height:1.2;white-space:nowrap}
+    .bottom-nav{position:fixed;z-index:50;left:50%;bottom:0;transform:translateX(-50%);width:min(840px,100%);display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding:4px 6px calc(4px + env(safe-area-inset-bottom));background:rgba(255,253,250,.96);border:1px solid #f1dfd7;border-bottom:0;border-radius:14px 14px 0 0;box-shadow:0 -6px 18px rgba(79,54,49,.11);backdrop-filter:blur(10px)}.bottom-nav a{display:flex;align-items:center;justify-content:center;min-height:32px;text-align:center;text-decoration:none;color:#d76472;background:#fff6f7;border:1px solid #f2dfe4;border-radius:10px;padding:5px 2px;font-size:clamp(10px,3vw,12px);font-weight:900;line-height:1.2;white-space:nowrap}
     @media print{body{background:#fff;font-size:15px}.page{max-width:none;padding:0}.hero,.section,.weather-bar{box-shadow:none;break-inside:avoid}.section{margin-top:9px}a{color:inherit;text-decoration:none}.bottom-nav{display:none!important}}
   
     @media (max-width: 480px){
@@ -115,22 +115,22 @@
 </section>
 <section class="section" id="schedule">
 <div class="section-title">⏱️ 旅程</div>
-<p style="font-size:17px;color:var(--sub);margin-bottom:14px"><strong>往路</strong>　東大阪市 → 阪神高速 → 湾岸線 → 神戸・元町<br/><strong>後半</strong>　<strong>車：</strong>三宮中央通り駐車場 → umieモザイク駐車場（P6） ／ <strong>徒歩：</strong>P6 → 神戸ポートタワー → 神戸ハーバーランド umie MOSAIC</p>
+<p style="font-size:17px;color:var(--sub);margin-bottom:14px"><strong>往路</strong>　自宅 → 阪神高速 → 湾岸線 → 神戸・元町<br/><strong>後半</strong>　<strong>車：</strong>三宮中央通り駐車場 → umieモザイク駐車場（P6） ／ <strong>徒歩：</strong>P6 → 神戸ポートタワー → 神戸ハーバーランド umie MOSAIC</p>
 <div class="callout" style="background:#f7fbfd;border:1px solid #c9e4ee;color:#4f6f7d"><strong>🚶 徒歩移動の目安：</strong>三宮中央通り駐車場 → Dick Bruna TABLE 約2分 ／ umieモザイク駐車場（P6） → 神戸ポートタワー 約7～10分 ／ 神戸ポートタワー → MOSAIC 約5～10分</div>
 
 <div class="timeline">
-<div class="tl-item"><div class="tl-time">13:00</div><div class="tl-name">🚗 東大阪市 出発</div><div class="tl-desc">往路は高速。湾岸線を基本に、神戸中心部へ。</div></div>
+<div class="tl-item"><div class="tl-time">13:00</div><div class="tl-name">🚗 自宅 出発</div><div class="tl-desc">往路は高速。湾岸線を基本に、神戸中心部へ。</div></div>
 <div class="tl-item"><div class="tl-time">13:50～14:15頃</div><div class="tl-name">🅿️ 三宮中央通り駐車場</div><div class="tl-desc">ナビの所要時間は約50分～1時間15分が目安。駐車位置と出口番号はスマホで撮影しておく。</div></div>
 <div class="tl-item"><div class="tl-time">早着時～14:45</div><div class="tl-name">🛍️ 大丸神戸店・神戸BAL〈オプション〉</div><div class="tl-desc">時間に余裕があれば、大丸神戸店B1「名作絵本のクッキー缶」または神戸BAL 3F「TODAY'S SPECIAL」へ。到着時刻に合わせて1か所を選び、十分に余裕があれば両方を見る。14:45で必ず切り上げる。</div></div>
 <div class="tl-item"><div class="tl-time">14:45</div><div class="tl-name">⏰ 早着時オプション終了</div><div class="tl-desc">滞在場所にかかわらず切り上げ、Dick Bruna TABLEへ移動。上下移動や信号、同行者の歩くペースも含めて約10分確保。</div></div>
 <div class="tl-item"><div class="tl-time">14:55頃</div><div class="tl-name">🐇 Dick Bruna TABLE 到着</div><div class="tl-desc">15:00予約。5分前到着を目安にする。</div></div>
 <div class="tl-item highlight"><div class="tl-time">15:00～</div><div class="tl-name">🫖 アフタヌーンティー</div><div class="tl-desc">今回のメイン。ミッフィーの世界観を楽しみながら、ゆっくり過ごす。</div></div>
 <div class="tl-item"><div class="tl-time">16:00以降</div><div class="tl-name">🎁 4F特設フロアでコラボグッズ</div><div class="tl-desc">飲食利用者は16:00から、席で案内されるQRコードで4F特設フロアの順番待ち登録が可能。17:00からはNIGHT商品の販売も始まる。</div></div>
-<div class="tl-item"><div class="tl-time">18:15頃</div><div class="tl-name">🚗 umieモザイク駐車場（P6）へ移動</div><div class="tl-desc">三宮中央通り駐車場を出庫し、umieモザイク駐車場（P6）へ。ここから神戸ポートタワーへ徒歩で移動し、観覧後はMOSAICへ戻る。</div></div>
+<div class="tl-item"><div class="tl-time">18:00頃</div><div class="tl-name">🚗 umieモザイク駐車場（P6）へ移動</div><div class="tl-desc">三宮中央通り駐車場を出庫し、umieモザイク駐車場（P6）へ。ここから神戸ポートタワーへ徒歩で移動し、観覧後はMOSAICへ戻る。</div></div>
 <div class="tl-item highlight"><div class="tl-time">19:00～20:00</div><div class="tl-name">🗼 神戸ポートタワー・夜景</div><div class="tl-desc">ミッフィーコラボを楽しみながら展望フロアへ。日没後の神戸港の夜景も楽しむ。屋上デッキは天候・風の状況に応じて。</div></div>
 <div class="tl-item"><div class="tl-time">20:15～21:15頃</div><div class="tl-name">🍽️ MOSAIC周辺で夕食</div></div>
 <div class="tl-item"><div class="tl-time">21:30～21:45頃</div><div class="tl-name">🌙 神戸 出発</div><div class="tl-desc">復路も高速。疲労と渋滞を見て、楽なルートを優先。</div></div>
-<div class="tl-item"><div class="tl-time">22:45～23:15頃</div><div class="tl-name">🏠 東大阪市 帰着</div><div class="tl-desc">道路状況により前後。帰着時刻より安全を優先。</div></div>
+<div class="tl-item"><div class="tl-time">22:45～23:15頃</div><div class="tl-name">🏠 自宅 帰着</div><div class="tl-desc">道路状況により前後。帰着時刻より安全を優先。</div></div>
 </div>
 </section>
 <section class="section" id="navigation">
@@ -140,7 +140,7 @@
 <li><span class="nav-num">2</span><div><span class="nav-name">Dick Bruna TABLE KOBE（徒歩）</span><span class="nav-addr">兵庫県神戸市中央区三宮町3丁目1-1</span><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dick%20Bruna%20TABLE%20KOBE%20%E7%A5%9E%E6%88%B8%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E4%B8%89%E5%AE%AE%E7%94%BA3%E4%B8%81%E7%9B%AE1-1" rel="noopener" target="_blank">📍 地図を開く</a></div></li>
 <li><span class="nav-num">3</span><div><span class="nav-name">umieモザイク駐車場（P6・車）</span><span class="nav-addr">兵庫県神戸市中央区東川崎町1丁目6-1 ／ 後半・本命</span><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=umie%E3%83%A2%E3%82%B6%E3%82%A4%E3%82%AF%E9%A7%90%E8%BB%8A%E5%A0%B4%20P6%20%E7%A5%9E%E6%88%B8" rel="noopener" target="_blank">📍 地図を開く</a></div></li>
 <li><span class="nav-num">4</span><div><span class="nav-name">神戸ポートタワー（徒歩）</span><span class="nav-addr">兵庫県神戸市中央区波止場町5-5</span><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%A5%9E%E6%88%B8%E3%83%9D%E3%83%BC%E3%83%88%E3%82%BF%E3%83%AF%E3%83%BC" rel="noopener" target="_blank">📍 地図を開く</a></div></li>
-<li><span class="nav-num">帰</span><div><span class="nav-name">東大阪市（車）</span><span class="nav-addr">復路も高速。疲労・渋滞状況に応じて楽なルートを選択。</span></div></li>
+<li><span class="nav-num">帰</span><div><span class="nav-name">自宅（車）</span><span class="nav-addr">復路も高速。疲労・渋滞状況に応じて楽なルートを選択。</span></div></li>
 </ol>
 <div class="callout" style="background:#fffaf0;border:1px solid #ead9b2;color:#705f43"><strong>前半の予備駐車場：</strong>デビスパーキング1（元町）。三宮中央通り駐車場が満車の場合の候補。 <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%87%E3%83%93%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B01%20%E5%85%83%E7%94%BA%20%E7%A5%9E%E6%88%B8%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E8%A5%BF%E7%94%BA34" rel="noopener" target="_blank">📍 地図を開く</a></div>
 <div class="callout" style="background:#f7fbfd;border:1px solid #c9e4ee;color:#4f6f7d"><strong>後半の予備駐車場：</strong>umie立体駐車場（P1）。umieモザイク駐車場（P6）が満車の場合の候補。 <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=umie%E7%AB%8B%E4%BD%93%E9%A7%90%E8%BB%8A%E5%A0%B4%20P1%20%E7%A5%9E%E6%88%B8" rel="noopener" target="_blank">📍 地図を開く</a></div>
@@ -199,11 +199,11 @@
 <section class="section" id="day-check">
 <div class="section-title">✅ 当日確認</div>
 <div class="checklist">
-<label class="check-item"><input data-day-check id="check-reservation" type="checkbox"/><span>Dick Bruna TABLEの予約画面を確認</span></label>
-<label class="check-item"><input data-day-check id="check-port-ticket" type="checkbox"/><span>神戸ポートタワーのチケット／QRを確認</span></label>
-<label class="check-item"><input data-day-check id="check-queue" type="checkbox"/><span>16:00以降、4F特設フロアの順番待ちに登録</span></label>
-<label class="check-item"><input data-day-check id="check-parking-photo" type="checkbox"/><span>駐車位置・区画・出口番号をスマホで撮影</span></label>
 <label class="check-item"><input data-day-check id="check-departure" type="checkbox"/><span>出発前に天気と阪神高速の渋滞・事故情報を確認</span></label>
+<label class="check-item"><input data-day-check id="check-parking-photo" type="checkbox"/><span>駐車位置・区画・出口番号をスマホで撮影</span></label>
+<label class="check-item"><input data-day-check id="check-reservation" type="checkbox"/><span>Dick Bruna TABLEの予約画面を確認</span></label>
+<label class="check-item"><input data-day-check id="check-queue" type="checkbox"/><span>16:00以降、4F特設フロアの順番待ちに登録</span></label>
+<label class="check-item"><input data-day-check id="check-port-ticket" type="checkbox"/><span>神戸ポートタワーのチケット／QRを確認</span></label>
 </div>
 <p class="save-note">チェック状態はこの端末に保存されます。</p>
 </section>
@@ -228,14 +228,14 @@
 </ul>
 </section>
 <div class="rabbit-divider">(・×・)</div>
-<div class="footer">🐇 神戸・ミッフィー アフタヌーンと夜景のおでかけしおり 2026.08.17（月）｜東大阪市 発</div>
+<div class="footer">🐇 神戸・ミッフィー アフタヌーンと夜景のおでかけしおり 2026.08.17（月）</div>
 </div>
 <nav aria-label="固定メニュー" class="bottom-nav">
-<a href="#navigation">🗺️ ナビ</a><a href="#spots">📍 スポット</a><a href="#day-links">🔗 リンク</a><a href="#top">⬆️ TOP</a>
+<a href="#navigation">🗺️ ナビ</a><a href="#spots">📍 スポット</a><a href="#day-check">✅ 当日確認</a><a href="#day-links">🔗 リンク</a><a href="#top">⬆️ TOP</a>
 </nav>
 <script>
 (function(){
-  var storageKey="kobe-miffy-v65-driver-day-checks";
+  var storageKey="kobe-miffy-v70-driver-day-checks";
   var boxes=document.querySelectorAll("[data-day-check]");
   var saved={};
   try{saved=JSON.parse(localStorage.getItem(storageKey)||"{}");}catch(e){saved={};}
