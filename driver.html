@@ -68,9 +68,9 @@
     .rabbit-divider{text-align:center;color:#d85e72;font-weight:900;letter-spacing:.05em;margin-top:4px}
     @media(min-width:600px){.card-grid-2{grid-template-columns:1fr 1fr}}
     @media(min-width:640px){.page{padding:24px 20px 60px}.section{padding:22px}.hero{padding:33px 28px 44px}}
-    .page{padding-bottom:calc(116px + env(safe-area-inset-bottom))}
+    .page{padding-bottom:calc(54px + env(safe-area-inset-bottom))}
     .checklist{display:grid;gap:9px}.check-item{display:flex;align-items:flex-start;gap:11px;background:#fffefa;border:1px solid var(--line);border-radius:14px;padding:11px 13px;font-size:17px;font-weight:700;color:#514340;cursor:pointer;transition:opacity .2s,background .2s}.check-item input{width:21px;height:21px;flex:0 0 auto;margin-top:4px;accent-color:#d76472}.check-item.done{opacity:.58;background:#faf7f3}.check-item.done span{text-decoration:line-through}.save-note{font-size:14px;color:var(--sub);margin-top:9px}
-    .bottom-nav{position:fixed;z-index:50;left:50%;bottom:0;transform:translateX(-50%);width:min(840px,100%);display:grid;grid-template-columns:repeat(4,1fr);gap:5px;padding:7px 8px calc(7px + env(safe-area-inset-bottom));background:rgba(255,253,250,.96);border:1px solid #f1dfd7;border-bottom:0;border-radius:18px 18px 0 0;box-shadow:0 -8px 24px rgba(79,54,49,.12);backdrop-filter:blur(10px)}.bottom-nav a{text-align:center;text-decoration:none;color:#d76472;background:#fff6f7;border:1px solid #f2dfe4;border-radius:12px;padding:7px 3px;font-size:13px;font-weight:900;line-height:1.35;white-space:nowrap}
+    .bottom-nav{position:fixed;z-index:50;left:50%;bottom:0;transform:translateX(-50%);width:min(840px,100%);display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:4px 6px calc(4px + env(safe-area-inset-bottom));background:rgba(255,253,250,.96);border:1px solid #f1dfd7;border-bottom:0;border-radius:14px 14px 0 0;box-shadow:0 -6px 18px rgba(79,54,49,.11);backdrop-filter:blur(10px)}.bottom-nav a{display:flex;align-items:center;justify-content:center;min-height:32px;text-align:center;text-decoration:none;color:#d76472;background:#fff6f7;border:1px solid #f2dfe4;border-radius:10px;padding:5px 2px;font-size:12px;font-weight:900;line-height:1.2;white-space:nowrap}
     @media print{body{background:#fff;font-size:15px}.page{max-width:none;padding:0}.hero,.section,.weather-bar{box-shadow:none;break-inside:avoid}.section{margin-top:9px}a{color:inherit;text-decoration:none}.bottom-nav{display:none!important}}
   
     @media (max-width: 480px){
@@ -231,11 +231,11 @@
 <div class="footer">🐇 神戸・ミッフィー アフタヌーンと夜景のおでかけしおり 2026.08.17（月）｜東大阪市 発</div>
 </div>
 <nav aria-label="固定メニュー" class="bottom-nav">
-<a href="#schedule">⏱️<br/>旅程</a><a href="#spots">📍<br/>スポット</a><a href="#packing">🎒<br/>持ち物</a><a href="#top">⬆️<br/>上部</a>
+<a href="#spots">📍 スポット</a><a href="#navigation">🗺️ ナビ</a><a href="#day-links">🔗 リンク</a><a href="#top">⬆️ TOP</a>
 </nav>
 <script>
 (function(){
-  var storageKey="kobe-miffy-v63-driver-day-checks";
+  var storageKey="kobe-miffy-v65-driver-day-checks";
   var boxes=document.querySelectorAll("[data-day-check]");
   var saved={};
   try{saved=JSON.parse(localStorage.getItem(storageKey)||"{}");}catch(e){saved={};}
