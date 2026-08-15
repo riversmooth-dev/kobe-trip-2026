@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#173f37" />
+  <title>南山城村・月ヶ瀬 午後ドライブしおり｜2026.08.07</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --jade-2:#79aa91; --jade-3:#367563; --forest:#173f37; --deep:#0e2925;
+      --night:#243652; --gold:#b89548; --gold-soft:#eadcae; --text:#193029;
+      --sub:#536b62; --ok:#347258; --warn:#9b661b; --card:rgba(252,255,253,.95);
+      --line:#c9ddd1; --shadow:0 9px 30px rgba(18,58,48,.12);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+      color:var(--text);
+      background:radial-gradient(circle at 12% 4%,rgba(255,255,255,.8),transparent 28%),linear-gradient(155deg,#edf5ef 0%,#c9ded0 54%,#85ad98 100%);
+      min-height:100vh;font-size:20px;line-height:1.8
+    }
+    a{color:var(--jade-3);text-underline-offset:3px}
+    .page{max-width:840px;margin:0 auto;padding:18px 14px 52px}
+    .hero{position:relative;overflow:hidden;border-radius:29px;padding:29px 22px 38px;background:linear-gradient(142deg,#1d5b4c 0%,#173f37 48%,#253755 100%);box-shadow:0 13px 38px rgba(10,42,36,.27);color:#fff}
+    .hero::after{content:"";position:absolute;right:-65px;top:-65px;width:230px;height:230px;border:2px solid rgba(232,212,145,.22);border-radius:50%;box-shadow:0 0 0 25px rgba(255,255,255,.025),0 0 0 55px rgba(255,255,255,.018)}
+    .hero-art{position:absolute;left:0;right:0;bottom:0;width:100%;height:108px;opacity:.25;pointer-events:none}
+    .hero-badge{display:inline-block;position:relative;z-index:2;font-size:14px;font-weight:800;letter-spacing:.1em;background:rgba(255,255,255,.14);border:1px solid rgba(237,222,164,.45);border-radius:999px;padding:4px 12px;margin-bottom:14px;color:#f5ebc7}
+    .hero h1{position:relative;z-index:2;font-size:clamp(29px,6.5vw,42px);font-weight:900;line-height:1.28;margin-bottom:8px;text-shadow:0 2px 10px rgba(0,0,0,.27)}
+    .hero-sub{position:relative;z-index:2;font-size:18px;color:rgba(255,255,255,.84);margin-bottom:18px}
+    .fixed-times-title{position:relative;z-index:2;font-size:13px;font-weight:900;letter-spacing:.08em;color:#f5ebc7;margin:2px 0 7px 2px}
+    .fixed-times{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;position:relative;z-index:2}
+    .fixed-item{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:10px 8px;text-align:center;backdrop-filter:blur(5px)}
+    .fixed-label{display:block;font-size:13px;font-weight:800;letter-spacing:.04em;color:rgba(242,229,181,.82);line-height:1.4;margin-bottom:2px}
+    .fixed-value{display:block;font-size:17px;font-weight:900;color:#fff;line-height:1.4}
+    .section[id]{scroll-margin-top:16px}
+    .weather-bar{margin-top:14px;display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:13px 16px;box-shadow:var(--shadow)}
+    .weather-icon{font-size:32px;line-height:1}.weather-title{font-size:20px;font-weight:900;color:var(--forest)}.weather-detail{font-size:17px;color:var(--sub)}
+    .section{margin-top:14px;background:var(--card);border:1px solid rgba(255,255,255,.8);border-radius:24px;box-shadow:var(--shadow);padding:20px 18px}
+    .section-title{font-size:22px;font-weight:900;color:var(--forest);margin-bottom:14px;display:flex;align-items:center;gap:8px}.section-title::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--gold),transparent);border-radius:999px}
+    .timeline{position:relative;padding-left:24px;margin-top:8px}.timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:3px;background:linear-gradient(180deg,var(--jade-2),var(--gold));border-radius:999px;opacity:.75}
+    .tl-item{position:relative;padding:0 0 16px 12px}.tl-item::before{content:"";position:absolute;left:-19px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--jade-3);box-shadow:0 0 0 3px rgba(54,117,99,.18)}.tl-item.highlight::before{background:var(--gold);box-shadow:0 0 0 4px rgba(184,149,72,.22)}
+    .tl-time{font-size:16px;font-weight:900;color:var(--jade-3);letter-spacing:.04em}.tl-name{font-size:21px;font-weight:900;color:var(--forest);line-height:1.45}.tl-desc{font-size:17px;color:var(--sub);line-height:1.65;margin-top:2px}
+    .card-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:10px}.card{background:#fbfefc;border:1px solid var(--line);border-radius:16px;padding:14px 15px}.card-title{font-size:20px;font-weight:900;color:var(--forest);margin-bottom:6px}.card p,.card li{font-size:17px;color:var(--sub);line-height:1.65}.card ul{padding-left:1.3em}.card li{margin:4px 0}
+    .tag{display:inline-block;font-size:14px;font-weight:900;border-radius:999px;padding:3px 10px;margin-bottom:6px}.tag-ok{background:#e1f0e7;border:1px solid #afd0bd;color:var(--ok)}.tag-warn{background:#fff5df;border:1px solid #e7cc91;color:var(--warn)}.tag-gold{background:#f4ebd0;border:1px solid #dcc383;color:#70561d}.tag-night{background:#e7ebf3;border:1px solid #b8c3d8;color:var(--night)}
+    .nav-list{list-style:none;margin-top:10px}.nav-list li{display:flex;gap:10px;align-items:baseline;background:#fbfefc;border:1px solid var(--line);border-radius:13px;padding:10px 13px;margin-bottom:8px;font-size:18px}.nav-num{font-size:16px;font-weight:900;color:var(--gold);min-width:1.9em}.nav-name{font-weight:800;color:var(--forest)}.nav-addr{font-size:16px;color:var(--sub);display:block;margin-top:1px}
+    .callout{border-radius:14px;padding:12px 14px;font-size:17px;margin-top:10px;line-height:1.65}.callout-warn{background:#fff8e7;border:1px solid #ead29c;border-left:5px solid var(--warn);color:#745018}
+    .source-list{font-size:15px;color:var(--sub);padding-left:1.3em}.source-list li{margin:10px 0;line-height:1.5}.source-list .check-link{display:block;font-weight:800;margin-bottom:2px}.source-list .check-desc{display:block;font-size:15px;color:var(--sub)}.footer{text-align:center;font-size:16px;color:var(--forest);opacity:.72;padding:24px 0 8px}
+    .map-link{display:inline-block;margin-top:5px;font-size:14px;font-weight:800;text-decoration:none;color:var(--jade-3)}
+    .checklist{display:grid;gap:9px}.check-item{display:flex;align-items:flex-start;gap:11px;background:#fbfefc;border:1px solid var(--line);border-radius:14px;padding:11px 13px;font-size:17px;font-weight:700;color:var(--forest);cursor:pointer;transition:opacity .2s,background .2s}.check-item input{width:21px;height:21px;flex:0 0 auto;margin-top:4px;accent-color:var(--jade-3)}.check-item.done{opacity:.58;background:#f2f6f3}.check-item.done span{text-decoration:line-through}.save-note{font-size:14px;color:var(--sub);margin-top:9px}
+    .packing-group{background:#fbfefc;border:1px solid var(--line);border-radius:16px;padding:14px 15px}.packing-group .checklist{margin-top:3px}.packing-group .check-item{padding:7px 8px;background:transparent;border:0;border-radius:9px;font-weight:500}.packing-group .check-item.done{background:#eef4f0}
+    .bottom-nav{position:fixed;z-index:50;left:50%;bottom:0;transform:translateX(-50%);width:min(840px,100%);display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding:4px 6px calc(4px + env(safe-area-inset-bottom));background:rgba(252,255,253,.96);border:1px solid var(--line);border-bottom:0;border-radius:14px 14px 0 0;box-shadow:0 -6px 18px rgba(18,58,48,.13);backdrop-filter:blur(10px)}.bottom-nav a{display:flex;align-items:center;justify-content:center;min-height:32px;text-align:center;text-decoration:none;color:var(--jade-3);background:#edf6f0;border:1px solid #c8ddd0;border-radius:10px;padding:5px 2px;font-size:clamp(10px,3vw,12px);font-weight:900;line-height:1.2;white-space:nowrap}
+    .page{padding-bottom:calc(60px + env(safe-area-inset-bottom))}
+    @media(min-width:600px){.card-grid-2{grid-template-columns:1fr 1fr}}
+    @media(min-width:640px){.page{padding:24px 20px 60px}.section{padding:22px}.hero{padding:33px 28px 42px}.fixed-times{grid-template-columns:repeat(4,1fr)}}
+    @media print{body{background:#fff;font-size:15px}.page{max-width:none;padding:0}.hero,.section,.weather-bar{box-shadow:none;break-inside:avoid}.section{margin-top:9px}a{color:inherit;text-decoration:none}.bottom-nav{display:none!important}}
+  </style>
+</head>
+<body>
+<div class="page" id="top">
+  <header class="hero">
+    <div class="hero-badge">Afternoon Drive · 2026.08.07 Fri</div>
+    <h1>南山城村・月ヶ瀬<br>お茶とダムと温泉</h1>
+    <p class="hero-sub">木津川沿いを東へ。村のお茶、夕暮れのダム、月ヶ瀬の湯をめぐる夏の午後旅。</p>
+    <div class="fixed-times-title">出発・営業時間・締切</div>
+    <div class="fixed-times" aria-label="出発・営業時間・締切">
+      <div class="fixed-item"><span class="fixed-label">出発</span><span class="fixed-value">13:00</span></div>
+      <div class="fixed-item"><span class="fixed-label">道の駅物販</span><span class="fixed-value">18:00まで</span></div>
+      <div class="fixed-item"><span class="fixed-label">ダムカード</span><span class="fixed-value">17:15まで</span></div>
+      <div class="fixed-item"><span class="fixed-label">温泉最終受付</span><span class="fixed-value">20:00まで</span></div>
+    </div>
+    <svg class="hero-art" viewBox="0 0 840 108" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0,108 L0,69 Q92,23 183,64 Q273,100 367,53 Q457,17 547,60 Q637,102 725,54 Q786,23 840,42 L840,108 Z" fill="#dbe9df"/>
+      <path d="M0,92 C150,68 244,99 356,86 C481,72 588,97 840,72 L840,108 L0,108 Z" fill="#8fc5bb" opacity=".7"/>
+      <path d="M0,99 C155,80 258,108 381,94 C510,80 633,103 840,85" fill="none" stroke="#eadcae" stroke-width="3" opacity=".75"/>
+    </svg>
+  </header>
+
+  <div class="weather-bar">
+    <div class="weather-icon">☀️</div>
+    <div><div class="weather-title">8/7（金）南山城村・月ヶ瀬</div><div class="weather-detail">真夏の午後。屋外は高山ダムだけ短時間にして、道の駅と温泉を中心に。</div></div>
+  </div>
+
+  <section class="section" id="overview">
+    <div class="section-title">🧭 概要</div>
+    <p style="font-size:17px;color:var(--sub)">13時に出発し、R163で南山城村（京都府）へ。道の駅で村のお茶と甘味を味わい、高山ダムを経て、月ヶ瀬（奈良県）の温泉へ向かう午後ドライブ。</p>
+  </section>
+
+  <section class="section" id="schedule">
+    <div class="section-title">⏱️ 旅程</div>
+    <p style="font-size:17px;color:var(--sub);margin-bottom:14px"><strong>往路</strong>　自宅 → R163 → みなみやましろ村<br><strong>後半</strong>　みなみやましろ村 → 高山ダム → 月ヶ瀬</p>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-time">13:00</div><div class="tl-name">🚗 自宅 出発</div><div class="tl-desc">往路はR163の下道。木津川沿いを東へ。</div></div>
+      <div class="tl-item highlight"><div class="tl-time">14:30～15:00頃</div><div class="tl-name">🍵 道の駅 お茶の京都 みなみやましろ村</div><div class="tl-desc">村抹茶ソフト、むらちゃプリン、お茶・特産品を見る。物販は18:00まで。</div></div>
+      <div class="tl-item"><div class="tl-time">～16:20頃</div><div class="tl-name">🚗 高山ダムへ</div><div class="tl-desc">今山信号方面から高山ダムへ。通行止め区間は現地の迂回案内に従う。</div></div>
+      <div class="tl-item highlight"><div class="tl-time">16:30～17:05頃</div><div class="tl-name">🌊 高山ダム</div><div class="tl-desc">夕方に約30分。ダムと山の景色を眺め、間に合えばダムカードも受け取る（17:15まで）。</div></div>
+      <div class="tl-item"><div class="tl-time">17:05頃</div><div class="tl-name">🚗 月ヶ瀬温泉へ</div><div class="tl-desc">迂回案内に従い、月ヶ瀬温泉へ。</div></div>
+      <div class="tl-item highlight"><div class="tl-time">17:30頃～</div><div class="tl-name">♨️ 梅の郷 月ヶ瀬温泉</div><div class="tl-desc">最終受付は20:00。入浴後は「梅こころ」で夕食も可能（LO20:00）。</div></div>
+      <div class="tl-item"><div class="tl-time">19:00～19:30頃</div><div class="tl-name">🌙 帰路へ</div><div class="tl-desc">帰路は下道を基本に、必要なら高速へ切り替える。</div></div>
+      <div class="tl-item"><div class="tl-time">21:00頃目安</div><div class="tl-name">🏠 自宅 帰着</div><div class="tl-desc">21:00頃を目安。夕食・休憩・道路状況により前後する。</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="navigation">
+    <div class="section-title">🗺️ ナビ設定順</div>
+    <ol class="nav-list">
+      <li><span class="nav-num">1</span><div><span class="nav-name">道の駅 お茶の京都 みなみやましろ村</span><span class="nav-addr">京都府相楽郡南山城村北大河原殿田102 ／ R163沿い・物販9:00～18:00</span><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=道の駅%20お茶の京都%20みなみやましろ村" target="_blank" rel="noopener">📍 地図を開く</a></div></li>
+      <li><span class="nav-num">2</span><div><span class="nav-name">高山ダム管理所</span><span class="nav-addr">京都府相楽郡南山城村田山字ツルギ43 ／ R163今山信号から約10分</span><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=高山ダム管理所" target="_blank" rel="noopener">📍 地図を開く</a></div></li>
+      <li><span class="nav-num">3</span><div><span class="nav-name">梅の郷 月ヶ瀬温泉</span><span class="nav-addr">奈良県奈良市月ヶ瀬尾山2681 ／ 10:30～20:30・最終受付20:00</span><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=梅の郷%20月ヶ瀬温泉" target="_blank" rel="noopener">📍 地図を開く</a></div></li>
+      <li><span class="nav-num">帰</span><div><span class="nav-name">自宅</span><span class="nav-addr">下道を基本に、必要なら高速へ切り替える。</span></div></li>
+    </ol>
+    <div class="callout callout-warn"><strong>高山ダム周辺：</strong>高山ダム下流道路（府道上野南山城線）は通行止め。現地の迂回案内に従う。</div>
+  </section>
+
+  <section class="section" id="spots">
+    <div class="section-title">📍 スポット別メモ</div>
+    <div class="card-grid card-grid-2">
+      <div class="card"><span class="tag tag-gold">今日の主役</span><div class="card-title">🍵 道の駅 みなみやましろ村</div><p>京都府唯一の村にあるR163沿いの道の駅。村抹茶ソフト、むらちゃプリン、お茶や特産品が並ぶ。物販は9:00～18:00。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=道の駅%20お茶の京都%20みなみやましろ村" target="_blank" rel="noopener">📍 地図を開く</a></div>
+      <div class="card"><span class="tag tag-ok">夕方の景色</span><div class="card-title">🌊 高山ダム</div><p>名張川に造られた多目的ダム。堤高67m、堤頂長208.7m。今回は夕方に約30分立ち寄る。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=高山ダム管理所" target="_blank" rel="noopener">📍 地図を開く</a></div>
+      <div class="card"><span class="tag tag-night">締め</span><div class="card-title">♨️ 梅の郷 月ヶ瀬温泉</div><p>月ヶ瀬の自然に囲まれた温泉。大人800円、最終受付20:00。午後ドライブの最後にゆっくり入浴。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=梅の郷%20月ヶ瀬温泉" target="_blank" rel="noopener">📍 地図を開く</a></div>
+      <div class="card"><span class="tag tag-warn">夕食候補</span><div class="card-title">🍚 お食事処 梅こころ</div><p>月ヶ瀬温泉に併設。11:00～20:30（LO20:00）。入浴後の夕食候補。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=お食事処%20梅こころ" target="_blank" rel="noopener">📍 地図を開く</a></div>
+    </div>
+  </section>
+
+  <section class="section" id="souvenirs">
+    <div class="section-title">🎁 おみやげ候補</div>
+    <div class="card-grid card-grid-2">
+      <div class="card"><span class="tag tag-gold">村の甘味</span><div class="card-title">🍮 むらちゃプリン</div><p>抹茶とほうじ茶、二つの味から選べる村のプリン。要冷蔵のため保冷バッグへ。</p></div>
+      <div class="card"><span class="tag tag-ok">現地で味わう</span><div class="card-title">🍦 村抹茶ソフト</div><p>道の駅に着いたら、まず味わいたい村抹茶ソフト。</p></div>
+      <div class="card"><span class="tag tag-night">旅の余韻</span><div class="card-title">🍵 南山城村のお茶</div><p>茶葉やティーバッグ、お茶菓子から、家でも楽しみたいものを選ぶ。</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="day-check">
+    <div class="section-title">✅ 当日確認</div>
+    <div class="checklist">
+      <label class="check-item"><input type="checkbox" id="check-weather-traffic" data-trip-check><span>出発前に天気と国道163号の交通状況を確認</span></label>
+      <label class="check-item"><input type="checkbox" id="check-station" data-trip-check><span>道の駅の営業状況を確認</span></label>
+      <label class="check-item"><input type="checkbox" id="check-dam-road" data-trip-check><span>高山ダム周辺の通行規制・迂回情報を確認</span></label>
+      <label class="check-item"><input type="checkbox" id="check-dam-card" data-trip-check><span>ダムカードの配布状況と配布時刻を確認</span></label>
+      <label class="check-item"><input type="checkbox" id="check-onsen" data-trip-check><span>月ヶ瀬温泉の営業と最終受付時刻を確認</span></label>
+    </div>
+    <p class="save-note">チェック状態はこの端末に保存されます。</p>
+  </section>
+
+  <section class="section" id="packing">
+    <div class="section-title">🎒 持ち物チェック</div>
+    <div class="card-grid card-grid-2">
+      <div class="packing-group"><span class="tag tag-ok">ドライブ</span><div class="checklist">
+        <label class="check-item"><input type="checkbox" id="pack-license" data-trip-check><span>免許証・ETCカード</span></label>
+        <label class="check-item"><input type="checkbox" id="pack-phone" data-trip-check><span>スマートフォン</span></label>
+        <label class="check-item"><input type="checkbox" id="pack-drink" data-trip-check><span>飲み物</span></label>
+        <label class="check-item"><input type="checkbox" id="pack-wallet" data-trip-check><span>現金・クレジットカード</span></label>
+        <label class="check-item"><input type="checkbox" id="pack-parasol" data-trip-check><span>晴雨兼用の折りたたみ日傘</span></label>
+        <label class="check-item"><input type="checkbox" id="pack-cooler" data-trip-check><span>保冷バッグ・保冷剤</span></label>
+        <label class="check-item"><input type="checkbox" id="pack-snack" data-trip-check><span>眠気対策用グミ・ラムネ</span></label>
+      </div></div>
+      <div class="packing-group"><span class="tag tag-night">温泉</span><div class="checklist">
+        <label class="check-item"><input type="checkbox" id="pack-bath-towel" data-trip-check><span>バスタオル</span></label>
+        <label class="check-item"><input type="checkbox" id="pack-face-towel" data-trip-check><span>フェイスタオル</span></label>
+        <label class="check-item"><input type="checkbox" id="pack-underwear" data-trip-check><span>着替えの下着</span></label>
+        <label class="check-item"><input type="checkbox" id="pack-shirt" data-trip-check><span>入浴後のTシャツ</span></label>
+        <label class="check-item"><input type="checkbox" id="pack-wet-bag" data-trip-check><span>濡れたタオル用の袋</span></label>
+      </div></div>
+    </div>
+    <p class="save-note">持ち物のチェック状態もこの端末に保存されます。</p>
+  </section>
+
+  <section class="section" id="summary">
+    <div class="section-title">📊 プランサマリー</div>
+    <div class="card-grid card-grid-2">
+      <div class="card"><div class="card-title">走行・負荷</div><p>午後から約8時間の小旅行</p><p>屋外は高山ダムの約30分だけ</p><p>帰宅時間の制限なし</p><p>負荷判定：<strong>軽め～普通</strong></p></div>
+      <div class="card"><div class="card-title">費用の目安</div><p>月ヶ瀬温泉：800円</p><p>基本の通行料：0円</p><p>お茶・スイーツ・夕食・おみやげ：別途</p><p>高速へ切り替えた場合：通行料別途</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="day-links">
+    <div class="section-title">🔗 当日確認リンク</div>
+    <ul class="source-list">
+      <li><a class="check-link" href="https://michinoeki.kyoto.jp/">道の駅 お茶の京都 みなみやましろ村 公式</a><span class="check-desc">当日の営業・商品・お知らせを確認</span></li>
+      <li><a class="check-link" href="https://www.water.go.jp/kansai/kizugawa/takayama/news/index.htm">高山ダム お知らせ・通行規制（水資源機構）</a><span class="check-desc">通行止め・迂回・ダムカードの最新情報を確認</span></li>
+      <li><a class="check-link" href="https://www.water.go.jp/kansai/kizugawa/takayama/access/index.htm">高山ダム アクセス（水資源機構）</a><span class="check-desc">高山ダムまでの公式アクセス案内を確認</span></li>
+      <li><a class="check-link" href="https://narashikanko.or.jp/spot/detail_10119.html">梅の郷 月ヶ瀬温泉（奈良市観光協会）</a><span class="check-desc">営業時間・最終受付・利用案内を確認</span></li>
+      <li><a class="check-link" href="https://www.city.nara.lg.jp/sightseeing/naraharu/111887.html">お食事処 梅こころ（奈良市）</a><span class="check-desc">食事処の営業時間と利用案内を確認</span></li>
+    </ul>
+  </section>
+
+  <div class="footer">🍵 南山城村・高山ダム・月ヶ瀬温泉 午後ドライブしおり 2026.08.07（金）</div>
+</div>
+<nav class="bottom-nav" aria-label="固定メニュー">
+  <a href="#schedule">⏱️ 旅程</a><a href="#navigation">🗺️ ナビ</a><a href="#day-check">✅ 当日確認</a><a href="#day-links">🔗 リンク</a><a href="#top">⬆️ TOP</a>
+</nav>
+<script>
+(function(){
+  var storageKey="minamiyamashiro-drive-20260807-checks";
+  var boxes=document.querySelectorAll("[data-trip-check]");
+  var saved={};
+  try{saved=JSON.parse(localStorage.getItem(storageKey)||"{}");}catch(e){saved={};}
+  function save(){
+    var state={};
+    boxes.forEach(function(box){
+      state[box.id]=box.checked;
+      box.closest(".check-item").classList.toggle("done",box.checked);
+    });
+    try{localStorage.setItem(storageKey,JSON.stringify(state));}catch(e){}
+  }
+  boxes.forEach(function(box){
+    box.checked=Boolean(saved[box.id]);
+    box.closest(".check-item").classList.toggle("done",box.checked);
+    box.addEventListener("change",save);
+  });
+})();
+</script>
+</body>
+</html>
