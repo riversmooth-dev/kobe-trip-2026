@@ -4,12 +4,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
-<meta content="#f7b7c7" name="theme-color"/>
+<meta content="#f26522" name="theme-color"/>
 <title>神戸・ミッフィーおでかけしおり｜2026.08.17</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
-<style>
+<style media="not all">
     :root{
       --pink:#f3c8d1;
       --pink-2:#ffe7ec;
@@ -87,6 +87,190 @@
 
   .map-link{display:inline-block;margin-top:5px;font-size:14px;font-weight:800;text-decoration:none;color:#b6455a}
   </style>
+<style>
+  :root{
+    --orange:#f26522;
+    --yellow:#ffc80b;
+    --blue:#005599;
+    --green:#247033;
+    --ink:#231f20;
+    --sub:#4a4a4a;
+    --line:#d9d9d9;
+    --pale-blue:#eef5f9;
+    --pale-yellow:#fff7d6;
+    --paper:#ffffff;
+    --card:#ffffff;
+    --text:#231f20;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    min-height:100vh;
+    background:#fff;
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+    font-size:16px;
+    line-height:1.75;
+  }
+  body::before{
+    content:"";
+    position:fixed;
+    z-index:60;
+    inset:0 auto 0 0;
+    width:9px;
+    background:linear-gradient(180deg,var(--orange) 0 25%,var(--yellow) 25% 50%,var(--blue) 50% 75%,var(--green) 75% 100%);
+    pointer-events:none;
+  }
+  a{color:var(--blue);text-underline-offset:3px;text-decoration-thickness:1px}
+  a:focus-visible,input:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+  .page{max-width:900px;margin:0 auto;padding:0 14px calc(62px + env(safe-area-inset-bottom)) 23px}
+  .hero{
+    position:relative;
+    overflow:hidden;
+    padding:54px 26px 34px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-top:0;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    left:0;right:0;bottom:0;
+    height:9px;
+    background:linear-gradient(90deg,var(--orange) 0 34%,var(--yellow) 34% 56%,var(--blue) 56% 80%,var(--green) 80% 100%);
+  }
+  .hero-badge{
+    display:inline-block;
+    margin-bottom:18px;
+    padding:0 0 5px;
+    border-bottom:5px solid var(--orange);
+    color:var(--ink);
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:18px;
+    font-weight:900;
+    letter-spacing:.01em;
+    line-height:1.2;
+  }
+  .hero h1{max-width:720px;margin-bottom:12px;color:var(--ink);font-size:clamp(32px,6.3vw,48px);font-weight:900;line-height:1.2;letter-spacing:-.035em}
+  .hero h1 .hero-line2{font-size:.86em;white-space:nowrap}
+  .hero-sub{max-width:680px;margin-bottom:22px;color:var(--sub);font-size:17px;line-height:1.7}
+  .hero-sub-small{font-size:17px}
+  .pc-break{display:none}
+  .fixed-times-title{margin:0 0 7px;color:var(--blue);font-size:12px;font-weight:900;letter-spacing:.1em}
+  .fixed-times{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--ink)}
+  .fixed-item{display:flex;min-width:0;flex-direction:column;padding:11px 9px;text-align:center;background:#fff;border-right:1px solid var(--ink);border-top:8px solid var(--orange)}
+  .fixed-item:nth-child(2){border-top-color:var(--yellow)}
+  .fixed-item:nth-child(3){border-top-color:var(--blue);border-right:0}
+  .fixed-label{display:flex;min-height:2.8em;align-items:center;justify-content:center;color:var(--ink);font-size:12px;font-weight:800;line-height:1.4}
+  .fixed-value{display:block;margin-top:auto;color:var(--ink);font-size:18px;font-weight:900;line-height:1.35}
+  .hero-art{display:none}
+  .weather-bar{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:13px;margin-top:16px;padding:17px 18px;background:#fff;border:1px solid var(--line);border-left:9px solid var(--green)}
+  .weather-icon{font-size:34px;line-height:1}
+  .weather-title{color:var(--ink);font-size:19px;font-weight:900;line-height:1.35}
+  .weather-title::before{content:"weather";display:block;margin-bottom:2px;color:var(--green);font-family:Georgia,"Times New Roman",serif;font-size:19px;font-weight:900;line-height:1;text-transform:lowercase}
+  .weather-detail{color:var(--sub);font-size:16px;line-height:1.65}
+  .section[id]{scroll-margin-top:16px}
+  .section{margin-top:16px;padding:24px 20px;background:#fff;border:1px solid var(--line);border-left:9px solid var(--orange)}
+  #overview{border-left-color:var(--orange)}
+  #schedule{border-left-color:var(--yellow)}
+  #spots{border-left-color:var(--blue)}
+  #souvenirs{border-left-color:var(--green)}
+  #day-check{border-left-color:var(--orange)}
+  #packing{border-left-color:var(--yellow)}
+  #day-links{border-left-color:var(--blue)}
+  .section-title{display:block;margin-bottom:20px;padding-bottom:13px;color:var(--ink);border-bottom:1px solid var(--line);font-size:20px;font-weight:900;line-height:1.4}
+  .section-title::before{content:attr(data-en);display:block;margin-bottom:4px;color:var(--ink);font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,7vw,48px);font-weight:900;letter-spacing:-.045em;line-height:1;text-transform:lowercase}
+  .callout{margin-top:12px;padding:13px 14px;border:1px solid var(--line);font-size:16px;line-height:1.65}
+  .callout-route{background:var(--pale-blue);border-color:rgba(0,85,153,.35);border-left:8px solid var(--blue);color:var(--ink)}
+  .callout-warn{background:var(--pale-yellow);border-color:rgba(255,200,11,.65);border-left:8px solid var(--orange);color:var(--ink)}
+  .timeline{margin-top:20px;border-top:1px solid var(--ink)}
+  .timeline::before{display:none}
+  .tl-item{position:relative;display:grid;grid-template-columns:minmax(92px,118px) 1fr;column-gap:15px;padding:13px 7px;border-bottom:1px solid var(--line)}
+  .tl-item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--orange);opacity:0}
+  .tl-item.highlight{background:var(--pale-yellow)}
+  .tl-item.highlight::before{opacity:1}
+  .tl-time{grid-column:1;color:var(--blue);font-size:15px;font-weight:900;letter-spacing:.01em;line-height:1.5}
+  .tl-name{grid-column:2;color:var(--ink);font-size:19px;font-weight:900;line-height:1.45}
+  .tl-desc{grid-column:2;margin-top:2px;color:var(--sub);font-size:16px;line-height:1.65}
+  .card-grid{display:grid;grid-template-columns:1fr;gap:0;margin-top:10px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .card{min-width:0;padding:16px;background:#fff;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .card-title{margin:7px 0 6px;color:var(--ink);font-size:20px;font-weight:900;line-height:1.45}
+  .card p,.card li{color:var(--sub);font-size:16px;line-height:1.68}
+  .card p strong{color:var(--ink)}
+  .card ul{padding-left:1.25em}
+  .card li{margin:4px 0}
+  .tag{display:inline-block;margin-bottom:3px;padding:3px 9px;border:1px solid var(--ink);border-radius:0;font-size:13px;font-weight:900;line-height:1.45}
+  .tag-pink{background:var(--orange);color:var(--ink)}
+  .tag-yellow{background:var(--yellow);color:var(--ink)}
+  .tag-blue{background:var(--blue);color:#fff}
+  .tag-night{background:var(--green);color:#fff}
+  .map-link{display:inline-block;margin-top:8px;color:var(--blue);font-size:14px;font-weight:900;text-decoration:none;border-bottom:2px solid var(--blue)}
+  .nav-list{list-style:none;margin-top:10px;border-top:1px solid var(--line)}
+  .nav-list li{display:flex;gap:10px;align-items:baseline;padding:11px 8px;border-bottom:1px solid var(--line);font-size:18px}
+  .nav-num{min-width:1.9em;color:var(--blue);font-size:16px;font-weight:900}
+  .nav-name{color:var(--ink);font-weight:900}
+  .nav-addr{display:block;margin-top:1px;color:var(--sub);font-size:16px}
+  .checklist{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .check-item{display:flex;align-items:flex-start;gap:11px;padding:12px 13px;background:#fff;border-right:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--ink);font-size:16px;font-weight:700;cursor:pointer;transition:opacity .2s,background .2s}
+  .check-item input{width:21px;height:21px;flex:0 0 auto;margin-top:4px;accent-color:var(--orange)}
+  .check-item.done{opacity:.58;background:#f2f2f2}
+  .check-item.done span{text-decoration:line-through}
+  .save-note{margin-top:9px;color:var(--sub);font-size:14px}
+  .source-list{list-style:none;padding:0;border-top:1px solid var(--line);font-size:15px}
+  .source-list li{padding:12px 8px;border-bottom:1px solid var(--line);line-height:1.5}
+  .source-list .check-link{display:block;margin-bottom:3px;color:var(--blue);font-weight:900}
+  .source-list .check-desc{display:block;color:var(--sub);font-size:15px}
+  .rabbit-divider{margin-top:20px;color:var(--orange);text-align:center;font-weight:900;letter-spacing:.06em}
+  .footer{padding:20px 0 12px;color:var(--ink);text-align:center;font-size:15px}
+  .bottom-nav{position:fixed;z-index:50;left:50%;bottom:0;transform:translate(-50%,var(--toolbar-follow-y,0px));will-change:transform;width:min(900px,100%);display:grid;grid-template-columns:repeat(5,1fr);gap:0;padding:0 0 env(safe-area-inset-bottom);background:#fff;border:1px solid var(--ink);border-bottom:0;box-shadow:0 -4px 16px rgba(35,31,32,.10)}
+  .bottom-nav a{display:flex;min-height:42px;align-items:center;justify-content:center;padding:6px 2px;border-right:1px solid var(--ink);color:var(--ink);background:var(--yellow);font-size:clamp(10px,3vw,12px);font-weight:900;line-height:1.2;text-align:center;text-decoration:none;white-space:nowrap}
+  .bottom-nav a:nth-child(2){background:var(--blue);color:#fff}
+  .bottom-nav a:nth-child(3){background:var(--green);color:#fff}
+  .bottom-nav a:nth-child(4){background:var(--orange);color:var(--ink)}
+  .bottom-nav a:nth-child(5){background:var(--ink);color:#fff;border-right:0}
+  @media(min-width:600px){
+    .card-grid-2{grid-template-columns:1fr 1fr}
+    .checklist{grid-template-columns:1fr 1fr}
+  }
+  @media(min-width:640px){
+    .page{padding-right:20px;padding-left:29px}
+    .hero{padding:66px 34px 42px}
+    .section{padding:28px 26px}
+    .pc-break{display:block}
+  }
+  @media(max-width:480px){
+    body::before{width:7px}
+    .page{padding-right:10px;padding-left:17px}
+    .hero{padding:34px 15px 28px}
+    .hero-badge{font-size:15px}
+    .hero h1{font-size:29px;line-height:1.25}
+    .hero h1 .hero-line2{font-size:.91em}
+    .hero-sub,.hero-sub-small{font-size:16px}
+    .fixed-item{padding:8px 5px}
+    .fixed-label{font-size:11px}
+    .fixed-value{font-size:15px}
+    .weather-bar{padding:14px 13px;border-left-width:7px}
+    .weather-icon{font-size:30px}
+    .section{padding:20px 13px;border-left-width:7px}
+    .section-title{font-size:18px}
+    .section-title::before{font-size:34px}
+    .tl-item{grid-template-columns:82px 1fr;column-gap:10px;padding:12px 4px}
+    .tl-time{font-size:14px}
+    .tl-name{font-size:18px}
+    .card{padding:14px 13px}
+  }
+  @media(max-width:380px){
+    .hero h1 .hero-line2{white-space:normal}
+    .tl-item{grid-template-columns:76px 1fr}
+  }
+  @media print{
+    body::before,.bottom-nav{display:none!important}
+    body{font-size:15px}
+    .page{max-width:none;padding:0}
+    .hero,.weather-bar,.section{break-inside:avoid}
+    a{color:inherit;text-decoration:none}
+  }
+</style>
 </head>
 <body>
 <div class="page" id="top">
@@ -110,18 +294,18 @@
 <div><div class="weather-title">8/17（月）神戸市</div><div class="weather-detail">くもり、所により雨。最高32℃・最低26℃、降水確率20％。南寄りの風がやや強い見込み。暑さと急な雨に備え、出発前に再確認</div></div>
 </div>
 <section class="section" id="overview">
-<div class="section-title">🧭 概要</div>
+<div class="section-title" data-en="overview">🧭 概要</div>
 <p style="font-size:16px;color:var(--sub)">Dick Bruna TABLEで限定メニューとコラボグッズを楽しみ、夜は神戸ポートタワーへ。ミッフィーコラボと夜景を見たあと、MOSAICで夕食</p>
 </section>
 <section class="section" id="schedule">
-<div class="section-title">⏱️ 旅程</div>
+<div class="section-title" data-en="schedule">⏱️ 旅程</div>
 <p style="font-size:16px;color:var(--sub);margin-bottom:14px"><strong>午後</strong>　自宅 → 神戸・元町 → Dick Bruna TABLE<br/><strong>夜</strong>　umieモザイク駐車場（P6） → 神戸ポートタワー → 神戸ハーバーランド umie MOSAIC</p>
-<div class="callout" style="background:#f7fbfd;border:1px solid #c9e4ee;color:#4f6f7d"><strong>🚶 徒歩移動の目安：</strong>三宮中央通り駐車場 ↔ Dick Bruna TABLE 約10～15分 ／ P6・MOSAIC ↔ 神戸ポートタワー 約10～15分</div>
+<div class="callout callout-route"><strong>🚶 徒歩移動の目安：</strong>三宮中央通り駐車場 ↔ Dick Bruna TABLE 約10～15分 ／ P6・MOSAIC ↔ 神戸ポートタワー 約10～15分</div>
 <div class="timeline"><div class="tl-item"><div class="tl-time">13:00</div><div class="tl-name">🚗 自宅 出発</div></div><div class="tl-item"><div class="tl-time">13:50～14:15頃</div><div class="tl-name">🅿️ 三宮中央通り駐車場</div><div class="tl-desc">柱のQRから駐車エリア別案内を保存し、階・ブロック・出入口番号を撮影</div></div><div class="tl-item"><div class="tl-time">早着時～14:45</div><div class="tl-name">🛍️ 大丸神戸店〈早着時オプション〉</div><div class="tl-desc">時間に余裕があれば、大丸神戸店B1「名作絵本のクッキー缶」へ</div></div><div class="tl-item"><div class="tl-time">14:45</div><div class="tl-name">⏰ 早着時オプション終了</div></div><div class="tl-item"><div class="tl-time">14:55頃</div><div class="tl-name">🐇 Dick Bruna TABLE 到着</div></div><div class="tl-item highlight"><div class="tl-time">15:00～16:15</div><div class="tl-name">🫖 Dick Bruna TABLE</div></div><div class="tl-item"><div class="tl-time">16:00</div><div class="tl-name">🎁 NIGHT商品の順番待ち登録</div><div class="tl-desc">席のQRから4F特設フロアの順番待ちを登録</div></div><div class="tl-item"><div class="tl-time">16:15～17:30</div><div class="tl-name">🛍️ 4F特設フロア・買い物</div><div class="tl-desc">NIGHT商品は17:00から。順番の案内に従い、17:30を切り上げ目安</div></div><div class="tl-item"><div class="tl-time">18:00頃</div><div class="tl-name">🚗 umieモザイク駐車場（P6）へ移動</div><div class="tl-desc">神戸ハーバーランドへ移動。駐車後、徒歩で神戸ポートタワーへ</div></div><div class="tl-item highlight"><div class="tl-time">19:00～20:00</div><div class="tl-name">🗼 神戸ポートタワー・夜景</div></div><div class="tl-item"><div class="tl-time">20:15～21:15頃</div><div class="tl-name">🍽️ MOSAIC周辺で夕食</div></div><div class="tl-item"><div class="tl-time">21:30～21:45頃</div><div class="tl-name">🌙 神戸 出発</div></div><div class="tl-item"><div class="tl-time">22:45～23:15頃</div><div class="tl-name">🏠 自宅 帰着予定</div></div></div>
 </section>
 
 <section class="section" id="spots">
-<div class="section-title">📍 スポット別メモ</div>
+<div class="section-title" data-en="spots">📍 スポット別メモ</div>
 <div class="card-grid card-grid-2">
 <div class="card"><span class="tag tag-pink">今日の主役</span><div class="card-title">🐇 Dick Bruna TABLE</div><p>ディック・ブルーナのイラストに囲まれたカフェ＆レストラン<br/>期間限定メニューは、アフタヌーンティーセット2,380円、白桃パフェ1,380円、バタフライピー ムースフロート800円<br/>席のみ予約済み（15:00～16:15）<br/>4F特設フロアは順番待ち制。DAY商品は9:30から店頭QRで、NIGHT商品は16:00から席のQRで、それぞれ順番待ちを登録する<br/>入店時に、飲食後のレシート提示で4Fへ入場できるか確認する</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dick%20Bruna%20TABLE%20%E7%A5%9E%E6%88%B8%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E4%B8%89%E5%AE%AE%E7%94%BA3%E4%B8%81%E7%9B%AE1-1" rel="noopener" target="_blank">📍 地図を開く</a></div>
 <div class="card"><span class="tag tag-pink">1つ目の駐車場</span><div class="card-title">🅿️ 三宮中央通り駐車場</div><p>Dick Bruna TABLEへ行く前半用の地下駐車場。三宮・元町・旧居留地の中間にあり、地下通路から周辺へ移動しやすい<br/>柱のQRコードから駐車エリア別の案内データを保存しておく<br/>帰りは案内データから駐車場の出入口までのルートを確認できる</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%89%E5%AE%AE%E4%B8%AD%E5%A4%AE%E9%80%9A%E3%82%8A%E9%A7%90%E8%BB%8A%E5%A0%B4%20%E7%A5%9E%E6%88%B8" rel="noopener" target="_blank">📍 地図を開く</a></div>
@@ -133,7 +317,7 @@
 </div>
 </section>
 <section class="section" id="souvenirs">
-<div class="section-title">🎁 おみやげ候補</div>
+<div class="section-title" data-en="souvenirs">🎁 おみやげ候補</div>
 <div class="card-grid card-grid-2">
 <div class="card">
 <span class="tag tag-pink">DAY／NIGHT</span>
@@ -174,7 +358,7 @@
 <div class="card"><span class="tag tag-yellow">DAY／NIGHT</span><div class="card-title">☁️ アクリルチャーム〈くも〉</div><p><strong>690円</strong><br/>DAY／NIGHT共通デザイン<br/>Dick Bruna TABLE・神戸ポートタワー<br/>☀️ 終日販売</p></div></div>
 </section>
 <section class="section" id="day-check">
-<div class="section-title">✅ 当日確認</div>
+<div class="section-title" data-en="check">✅ 当日確認</div>
 <div class="checklist">
 <label class="check-item"><input data-day-check id="check-departure" type="checkbox"/><span>出発前に天気と阪神高速の渋滞・事故情報を確認</span></label>
 <label class="check-item"><input data-day-check id="check-parking-photo" type="checkbox"/><span>柱のQRコードから案内データを保存し、階・ブロック・出入口番号を撮影</span></label>
@@ -186,14 +370,14 @@
 <p class="save-note">チェック状態はこの端末に保存されます</p>
 </section>
 <section class="section" id="packing">
-<div class="section-title">🎒 持ち物チェック</div>
+<div class="section-title" data-en="packing">🎒 持ち物チェック</div>
 <div class="card-grid card-grid-2">
 <div class="card"><span class="tag tag-pink">基本</span><ul><li>スマートフォン</li><li>財布</li><li>飲み物</li></ul></div>
 <div class="card"><span class="tag tag-blue">天気・冷房対策</span><ul><li>折りたたみ傘</li><li>薄手の羽織りもの</li></ul></div>
 </div>
 </section>
 <section class="section" id="day-links">
-<div class="section-title">🔗 リンク</div>
+<div class="section-title" data-en="links">🔗 リンク</div>
 <ul class="source-list">
 <li><a class="check-link" href="https://www.jma.go.jp/bosai/forecast/#area_type=class20s&amp;area_code=2811000">神戸市中央区の天気予報</a><span class="check-desc">神戸市中央区の天気・降水確率・気温を確認</span></li>
 
