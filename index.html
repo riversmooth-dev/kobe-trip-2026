@@ -72,12 +72,13 @@
     @media print{body{background:#fff;font-size:15px}.page{max-width:none;padding:0}.hero,.section,.weather-bar{box-shadow:none;break-inside:avoid}.section{margin-top:9px}a{color:inherit;text-decoration:none}.bottom-nav{display:none!important}}
   
     @media (max-width: 480px){
+      .hero{padding-bottom:24px}
       .hero h1{font-size:26px}
       .hero h1 .hero-line2{font-size:1em}
       .fixed-times{gap:6px}
-      .fixed-item{padding:8px 6px}
+      .fixed-item{display:flex;flex-direction:column;padding:8px 6px}
       .fixed-label{font-size:11px}
-      .fixed-value{font-size:15px}
+      .fixed-value{font-size:15px;margin-top:auto}
     }
 
     @media (max-width: 380px){
@@ -92,7 +93,7 @@
 <header class="hero">
 <div class="hero-badge">Kobe Miffy Day · 2026.08.17 Mon</div>
 <h1>神戸・ミッフィー<br/><span class="hero-line2">アフタヌーンと夜景の一日</span></h1>
-<p class="hero-sub hero-sub-small">午後はDick Bruna TABLEでゆっくり<br class="pc-break"/>夕方からはポートタワーへ移動して、ミッフィーのコラボと神戸の夜景を楽しむ一日</p>
+<p class="hero-sub hero-sub-small">午後はDick Bruna TABLEでゆっくり<br/>夕方からはポートタワーへ移動して、ミッフィーのコラボと神戸の夜景を楽しむ一日</p>
 <div class="fixed-times-title">出発・予約・固定時刻</div>
 <div aria-label="出発・予約・固定時刻" class="fixed-times">
 <div class="fixed-item"><span class="fixed-label">出発</span><span class="fixed-value">13:00</span></div>
@@ -216,7 +217,7 @@
 </nav>
 <script>
 (function(){
-  var storageKey="kobe-miffy-v100-companion-day-checks";
+  var storageKey="kobe-miffy-v103-companion-day-checks";
   var boxes=document.querySelectorAll("[data-day-check]");
   var saved={};
   try{saved=JSON.parse(localStorage.getItem(storageKey)||"{}");}catch(e){saved={};}
