@@ -77,7 +77,7 @@
       .hero h1 .hero-line2{font-size:1em}
       .fixed-times{gap:6px}
       .fixed-item{display:flex;flex-direction:column;padding:8px 6px}
-      .fixed-label{font-size:11px}
+      .fixed-label{display:flex;align-items:center;justify-content:center;min-height:2.8em;font-size:11px}
       .fixed-value{font-size:15px;margin-top:auto}
     }
 
@@ -242,7 +242,7 @@
 </nav>
 <script>
 (function(){
-  var storageKey="kobe-miffy-v103-driver-day-checks";
+  var storageKey="kobe-miffy-v104-driver-day-checks";
   var boxes=document.querySelectorAll("[data-day-check]");
   var saved={};
   try{saved=JSON.parse(localStorage.getItem(storageKey)||"{}");}catch(e){saved={};}
